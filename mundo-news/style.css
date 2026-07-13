@@ -52,14 +52,17 @@ body {
 
 .header-top {
     border-bottom: 1px solid var(--clr-gray-20);
-    padding: 1.2rem 0 1.4rem 0;
+    width: min(1400px, 90vw);
+    margin: 0 auto;
+    padding: 1.4rem 0;
 
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.8rem;
 }
 
 .header-socials {
-    padding: 0 0.8rem 0 0;
     display: flex;
     gap: 0.85rem;
 }
@@ -82,6 +85,35 @@ body {
     height: 2px;
     width: 100%;
     top: calc(100% + 4px);
+}
+
+.header-search {
+    background-color: var(--clr-gray-20);
+    border: 3px solid var(--clr-gray-20);
+    border-radius: 0.6rem;
+    display: flex;
+}
+
+.header-search__input {
+    background: transparent;
+    color: var(--clr-fg);
+    border: none;
+    padding: 0.3rem 0.6rem;
+    outline: none;
+    font-size: 1.0rem;
+    width: 320px;
+}
+
+.header-search__input::placeholder {
+    color: var(--clr-gray-50);
+}
+
+.header-search__button {
+    background-color: var(--clr-gray-20);
+    border: 0;
+    border-radius: 0 0.4rem 0.4rem 0;
+    width: 38px;
+
 }
 
 .header-title {
