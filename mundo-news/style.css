@@ -34,7 +34,23 @@
     --clr-gray-15: #24212c;
     --clr-gray-10: #18161d;
     --clr-gray-5:  #0c0b0f;
+
+    --container-width: min(1400px, 90vw);
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --fw-bolder: 900;
 }
+
+/* Utils */
+.container {
+    width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* Global styles by element */
 
 * {}
 
@@ -48,12 +64,14 @@ html, body {
 body {
     background-color: var(--clr-bg);
     color: var(--clr-fg);
+    font-weight: var(--fw-regular);
+    font-size: 1rem;
 }
 
+/* Class styles */
+
 .header-top {
-    border-bottom: 1px solid var(--clr-gray-20);
-    width: min(1400px, 90vw);
-    margin: 0 auto;
+    border-bottom: 3px solid var(--clr-gray-25);
     padding: 1.4rem 0;
 
     display: flex;
@@ -88,8 +106,8 @@ body {
 }
 
 .header-search {
-    background-color: var(--clr-gray-20);
-    border: 3px solid var(--clr-gray-20);
+    background-color: var(--clr-gray-25);
+    border: 3px solid var(--clr-gray-25);
     border-radius: 0.6rem;
     display: flex;
 }
@@ -105,23 +123,73 @@ body {
 }
 
 .header-search__input::placeholder {
-    color: var(--clr-gray-50);
+    color: var(--clr-gray-55);
 }
 
 .header-search__button {
-    background-color: var(--clr-gray-20);
+    background-color: var(--clr-gray-25);
     border: 0;
     border-radius: 0 0.4rem 0.4rem 0;
     width: 38px;
-
+    color: var(--clr-gray-55);
 }
 
-.header-title {
+.header-main {
+    /* Using position relative/absolute instead of display flex so the title
+       will always be in the center */
+    position: relative;
+}
+
+.header-main__weather {
+    background-color: var(--clr-gray-25);
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 75px;
+}
+
+.header-main__title {
     text-transform: uppercase;
     text-align: center;
-    font-size: 2.7rem;
+    font-size: 3.2rem;
+    padding: 3.5rem 0;
+    margin: 0;
 }
 
-.header-title__accent {
+.header-main__title-accent {
     color: var(--clr-blue);
+}
+
+.header-main__apoie {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-topics {
+}
+
+.header-topics ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header-topics a {
+    color: var(--clr-gray-70);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: var(--fw-bold);
+}
+
+.header-topics__visible-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
 }
