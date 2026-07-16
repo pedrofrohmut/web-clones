@@ -10,6 +10,7 @@
     /* --clr-dark-blue: #003399; */
 
     --clr-blue: #3766d5;
+    --clr-yellow: #d4b87a;
 
     --clr-white: #ffffff;
     --clr-black: #000000;
@@ -42,6 +43,11 @@
     --fw-semibold: 600;
     --fw-bold: 700;
     --fw-bolder: 900;
+
+    --brightness-10: brightness(1.1);
+    --brightness-20: brightness(1.2);
+    --brightness-30: brightness(1.3);
+    --brightness-40: brightness(1.4);
 }
 
 /* Utils */
@@ -66,130 +72,10 @@ body {
     color: var(--clr-fg);
     font-weight: var(--fw-regular);
     font-size: 1rem;
+    font-family: "Noto Serif", serif;
 }
 
-/* Class styles */
-
-.header-top {
-    border-bottom: 3px solid var(--clr-gray-25);
-    padding: 1.4rem 0;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2.8rem;
-}
-
-.header-socials {
-    display: flex;
-    gap: 0.85rem;
-}
-
-.header-socials a {
-    color: var(--clr-gray-70);
-    text-decoration: none;
-    font-size: 1.2rem;
-    text-align: center;
-
-    width: 1.8rem;
-    position: relative;
-}
-
-.header-socials a::after {
-    content: "";
-    position: absolute;
-    display: block;
-    background-color: var(--clr-gray-70);
-    height: 2px;
-    width: 100%;
-    top: calc(100% + 4px);
-}
-
-.header-search {
-    background-color: var(--clr-gray-25);
-    border: 3px solid var(--clr-gray-25);
-    border-radius: 0.6rem;
-    display: flex;
-}
-
-.header-search__input {
-    background: transparent;
-    color: var(--clr-fg);
-    border: none;
-    padding: 0.3rem 0.6rem;
-    outline: none;
-    font-size: 1.0rem;
-    width: 320px;
-}
-
-.header-search__input::placeholder {
-    color: var(--clr-gray-55);
-}
-
-.header-search__button {
-    background-color: var(--clr-gray-25);
-    border: 0;
-    border-radius: 0 0.4rem 0.4rem 0;
-    width: 38px;
-    color: var(--clr-gray-55);
-}
-
-.header-main {
-    /* Using position relative/absolute instead of display flex so the title
-       will always be in the center */
-    position: relative;
-}
-
-.header-main__weather {
-    background-color: var(--clr-gray-25);
-
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 300px;
-    height: 75px;
-}
-
-.header-main__title {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 3.2rem;
-    padding: 3.5rem 0;
-    margin: 0;
-}
-
-.header-main__title-accent {
-    color: var(--clr-blue);
-}
-
-.header-main__apoie {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.header-topics {
-}
-
-.header-topics ul {
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.header-topics a {
-    color: var(--clr-gray-70);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: var(--fw-bold);
-}
-
-.header-topics__visible-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+button,
+input {
+    font-family: "Noto Serif", serif;
 }
