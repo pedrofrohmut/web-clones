@@ -2,6 +2,10 @@ import { useState } from "react"
 
 import "/src/layout/header.css"
 
+/*
+  TODO: make the topics list dynamic. Make it have as many elements that can fit
+  in the screen and the ones that don't go in the more topics list.
+ */
 const Header = () => {
   const [isOpenMore, setIsOpenMore] = useState<boolean>(false)
 

@@ -3,10 +3,11 @@
 
     /* To make the effect that it goes over the border of the next element */
     position: relative;
-    bottom: -0.9rem;
+    bottom: -0.5rem;
+    display: inline-block;
     left: 0.75rem;
     padding: 0 0.5rem;
-    z-index: 2;
+    z-index: 1;
     background-color: var(--clr-bg);
 }
 
@@ -21,10 +22,9 @@
     /* To make the effect that the link in over the border of the previous element
      at the the bottom right */
     position: relative;
-    top: -1.1rem;
+    top: -0.85rem;
     left: calc(100% - 6.5rem);
     padding: 0 0.5rem;
-    z-index: 2;
     background-color: var(--clr-bg);
 }
 
@@ -58,7 +58,7 @@
 }
 
 .opinion-slider__cards {
-    padding: 1.1rem 0.5rem;
+    padding: 2.0rem 0.5rem;
     display: flex;
     gap: 1.85rem;
     align-items: center; /* Let cards have independent heights */
@@ -87,9 +87,9 @@
 
 .opinion-card__name {
     color: var(--clr-blue-80);
-    font-size: 1.0rem;
+    font-size: 0.9rem;
     font-weight: var(--fw-bold);
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.1rem;
 }
 
 .opinion-card__text {

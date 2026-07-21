@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 
+import { textLimit } from "/src/utils/text"
+
 import "/src/pages/home/opinions-slider.css"
 
 type Opinion = {
@@ -27,7 +29,7 @@ const OpinionCard: React.FC<OpinionCardProps> = ({ opinion }) => {
       {/* Text */}
       <div className="opinion-card__right">
         <div className="opinion-card__name">{opinion.name}</div>
-        <div className="opinion-card__text">{opinion.text}</div>
+        <div className="opinion-card__text">{textLimit(opinion.text, 60)}</div>
       </div>
 
     </div>

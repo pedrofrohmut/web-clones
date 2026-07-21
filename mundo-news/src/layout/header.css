@@ -171,6 +171,7 @@
     position: absolute;
     top: calc(100% + 0.4rem);
     right: 0;
+    z-index: 1;
 }
 
 .header-topics__links-more {
