@@ -1,4 +1,4 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 
 type Opinion = {
   id: number
@@ -44,40 +44,56 @@ const OpinionsSlider: React.FC<OpinionsSliderProps> = ({ opinions }) => {
 
   const cardsRef = useRef<HTMLDivElement>(null)
 
-  /* TODO: Move active arrow out of the ifs. Using the other button should active too. */
-  const handleSlideChange = (direction: string, amount: number) => {
-    if (direction == "right") {
-      const rightLimit = 0
-      const isAtRightLimit = (slidePosition + amount) > rightLimit
-      if (isAtRightLimit) {
-        setIsAtRightLimit(true)
-        setSlidePosition(rightLimit)
-      } else {
-        setIsAtRightLimit(false)
-        setSlidePosition(prev => prev + amount)
-      }
+  const handleSlideChange = (direction: string, move: number) => {
+    const rightLimit = 0
+
+    if (!cardsRef.current) {
+      console.log("Reference problem with slider cards.")
       return
     }
-
-    if (!cardsRef.current || direction !== "left") {
-      return
-    }
-
     const visibleWidth = cardsRef.current.offsetWidth
     const totalWidth = cardsRef.current.scrollWidth
 
     const leftLimit =  visibleWidth - totalWidth
-    const isAtLeftLimit = (slidePosition - amount) < leftLimit
-    if (isAtLeftLimit) {
-      setIsAtLeftLimit(true)
-      setSlidePosition(leftLimit)
-    } else {
-      setIsAtLeftLimit(false)
-      setSlidePosition(slidePosition - amount)
+
+    if (direction === "right") {
+      if ((slidePosition + move) > rightLimit) {
+        setSlidePosition(rightLimit)
+      } else {
+        setSlidePosition(slidePosition + move)
+      }
+    }
+
+    if (direction == "left") {
+      if ((slidePosition - move) < leftLimit) {
+        setSlidePosition(leftLimit)
+      } else {
+        setSlidePosition(slidePosition - move)
+      }
     }
   }
 
-  /* TODO: Make a useEffect to check the limits */
+  /*
+    You need this useEffect because refreshing at limit state in the handleSlideChange
+    won't work as expected. When you have code that depedens on state changes you got
+    to use useEffect.
+   */
+  useEffect(() => {
+    const rightLimit = 0
+
+    if (!cardsRef.current) {
+      console.log("Reference problem with slider cards.")
+      return
+    }
+    const visibleWidth = cardsRef.current.offsetWidth
+    const totalWidth = cardsRef.current.scrollWidth
+
+    const leftLimit =  visibleWidth - totalWidth
+
+    // Refresh at limit checks
+    setIsAtRightLimit(slidePosition === rightLimit)
+    setIsAtLeftLimit(slidePosition === leftLimit)
+  }, [slidePosition])
 
   return (
     <>
@@ -108,7 +124,7 @@ const OpinionsSlider: React.FC<OpinionsSliderProps> = ({ opinions }) => {
         {/* Left button */}
         <button
           onClick={() => handleSlideChange("right", slideAmount)}
-          className={`opinion-slider__btn-left ${!isAtRightLimit && "active"}`}
+          className={`opinion-slider__btn-left ${!isAtRightLimit ? "active" : ""}`}
         >
           <i className="fa-solid fa-arrow-left"></i>
         </button>
@@ -116,7 +132,7 @@ const OpinionsSlider: React.FC<OpinionsSliderProps> = ({ opinions }) => {
         {/* Right button */}
         <button
           onClick={() => handleSlideChange("left", slideAmount)}
-          className={`opinion-slider__btn-right ${!isAtLeftLimit && "active"}`}
+          className={`opinion-slider__btn-right ${!isAtLeftLimit ? "active" : ""}`}
         >
           <i className="fa-solid fa-arrow-right"></i>
         </button>

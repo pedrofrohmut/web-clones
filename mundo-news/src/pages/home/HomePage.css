@@ -6,7 +6,7 @@
 .opinion-slider {
     border-top: 2px solid var(--clr-gray-25);
     border-bottom: 2px solid var(--clr-gray-25);
-    padding: 1rem 2.2rem;
+    padding: 0rem 2.2rem; /* Padding to place the arrow buttons */
     position: relative;
 }
 
@@ -15,6 +15,7 @@
 }
 
 .opinion-slider__cards {
+    padding: 1.2rem 0.5rem;
     display: flex;
     gap: 1.85rem;
     align-items: center; /* Let cards have independent heights */
@@ -60,7 +61,7 @@
     background: none;
     border: none;
     border-radius: var(--border-radius-4);
-    color: var(--clr-gray-35);
+    color: var(--clr-gray-25);
     font-size: 1.5rem;
     padding: 0.2rem 0.8rem;
     cursor: pointer;
@@ -70,9 +71,9 @@
     transform: translateY(-50%);
 }
 
-.opinion-slider__btn-left .active,
-.opinion-slider__btn-right .active {
-    filter: var(--brightness-40);
+.opinion-slider__btn-left.active,
+.opinion-slider__btn-right.active {
+    color: var(--clr-gray-75);
 }
 
 .opinion-slider__btn-left {
