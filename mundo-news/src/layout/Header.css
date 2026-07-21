@@ -83,7 +83,9 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 300px;
+    min-width: 190px;
+    max-width: 300px;
+    width: 10vw;
     height: 75px;
 }
 
@@ -118,7 +120,8 @@
     filter: var(--brightness-20);
 }
 
-.header-topics {
+@media (width < 1025px) {
+    .header-topics { display: none; }
 }
 
 .header-topics__links {
@@ -175,6 +178,7 @@
     margin: 0;
     list-style: none;
     border: 2px solid var(--clr-gray-25);
+    background-color: var(--clr-bg);
 
     display: flex;
     flex-direction: column;

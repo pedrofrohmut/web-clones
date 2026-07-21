@@ -1,3 +1,6 @@
+/* Using this file instead of /public/style.css so hot reloading works. unlike in
+the public folder you would have to keep hitting the F5 (refresh key) */
+
 :root {
     font-size: 16px;
 
@@ -9,7 +12,6 @@
     /* Base pallete */
     --clr-bg: #28242d;
     --clr-fg: #c9c5d3;
-    /* --clr-dark-blue: #003399; */
 
     --clr-blue: #3966ff;
     --clr-dark-blue: #1333bf;
@@ -18,7 +20,7 @@
     --clr-white: #ffffff;
     --clr-black: #000000;
 
-    /* Grays - from base color */
+    /* Grays - from base color #28242d */
     --clr-gray-95: #f1f0f4;
     --clr-gray-90: #e4e2e9;
     --clr-gray-85: #d6d3de;
@@ -39,6 +41,27 @@
     --clr-gray-10: #18161d;
     --clr-gray-5:  #0c0b0f;
 
+    /* Blues - from base color #3366ff */
+    --clr-blue-95: #e6ebff;
+    --clr-blue-90: #ccd8ff;
+    --clr-blue-85: #b3c4ff;
+    --clr-blue-80: #99b1ff;
+    --clr-blue-75: #809dff;
+    --clr-blue-70: #668aff;
+    --clr-blue-65: #4d76ff;
+    --clr-blue-60: #3363ff;
+    --clr-blue-55: #1a4fff;
+    --clr-blue-50: #003cff;
+    --clr-blue-45: #0036e6;
+    --clr-blue-40: #0030cc;
+    --clr-blue-35: #002ab3;
+    --clr-blue-30: #002499;
+    --clr-blue-25: #001e80;
+    --clr-blue-20: #001866;
+    --clr-blue-15: #00124d;
+    --clr-blue-10: #000c33;
+    --clr-blue-5:  #00061a;
+
     --container-width: min(1400px, 90vw);
 
     --fw-light: 300;
@@ -51,6 +74,9 @@
     --brightness-20: brightness(1.2);
     --brightness-30: brightness(1.3);
     --brightness-40: brightness(1.4);
+
+    --border-radius-6: 0.6rem;
+    --border-radius-4: 0.4rem;
 }
 
 /* Utils */

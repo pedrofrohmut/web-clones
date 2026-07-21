@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-import "./Header.css"
+import "/src/layout/Header.css"
 
 const Header = () => {
   const [isOpenMore, setIsOpenMore] = useState<boolean>(false)

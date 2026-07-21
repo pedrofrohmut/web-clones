@@ -1,12 +1,12 @@
 {
   "exclude": ["node_modules/"],
-  "include": ["src/", "vite.config.ts"],
+  "include": ["src/"],
   "compilerOptions": {
     "target": "es2023",
     "lib": ["ES2023", "DOM"],
     "module": "esnext",
 
-    "types": ["vite/client", "node"],
+    "types": ["node"],
     "typeRoots": ["./src/types", "./node_modules/@types"],
     "jsx": "react-jsx",
 
@@ -16,5 +16,11 @@
     "skipLibCheck": true,
 
     "strict": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "/src/*": ["./src/*"]
+    },
+    "ignoreDeprecations": "6.0"
   }
 }
