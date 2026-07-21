@@ -1,12 +1,55 @@
 .opinion-title {
     font-size: 1.4rem;
-    margin-bottom: 0.4rem;
+
+    /* To make the effect that it goes over the border of the next element */
+    position: relative;
+    bottom: -0.9rem;
+    left: 0.75rem;
+    padding: 0 0.5rem;
+    z-index: 2;
+    background-color: var(--clr-bg);
+}
+
+.opinion-see-more {
+    --main-color: var(--clr-gray-65);
+    --hover-color: var(--clr-gray-85);
+
+    font-size: 1.0rem;
+    color: var(--main-color);
+    text-decoration: none;
+
+    /* To make the effect that the link in over the border of the previous element
+     at the the bottom right */
+    position: relative;
+    top: -1.1rem;
+    left: calc(100% - 6.5rem);
+    padding: 0 0.5rem;
+    z-index: 2;
+    background-color: var(--clr-bg);
+}
+
+.opinion-see-more::after {
+    content: "";
+    display: block;
+    background-color: var(--main-color);
+    height: 2px;
+    width: 80%;
+    left: 10%;
+    position: absolute;
+}
+
+.opinion-see-more:hover {
+    color: var(--hover-color);
+}
+
+.opinion-see-more:hover::after {
+    background-color: var(--hover-color);
 }
 
 .opinion-slider {
     border-top: 2px solid var(--clr-gray-25);
     border-bottom: 2px solid var(--clr-gray-25);
-    padding: 0rem 2.2rem; /* Padding to place the arrow buttons */
+    padding: 0rem 2.2rem; /* Padding space to place the arrow buttons */
     position: relative;
 }
 
@@ -15,7 +58,7 @@
 }
 
 .opinion-slider__cards {
-    padding: 1.2rem 0.5rem;
+    padding: 1.1rem 0.5rem;
     display: flex;
     gap: 1.85rem;
     align-items: center; /* Let cards have independent heights */

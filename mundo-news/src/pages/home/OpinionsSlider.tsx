@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react"
 
+import "/src/pages/home/opinions-slider.css"
+
 type Opinion = {
   id: number
   name: string
@@ -97,7 +99,7 @@ const OpinionsSlider: React.FC<OpinionsSliderProps> = ({ opinions }) => {
 
   return (
     <>
-      <div className="opinion-title">Opinião</div>
+      <span className="opinion-title">Opinião</span>
 
       <div className="opinion-slider">
 
@@ -139,6 +141,7 @@ const OpinionsSlider: React.FC<OpinionsSliderProps> = ({ opinions }) => {
 
       </div>
 
+      <a href="#" className="opinion-see-more">Ver mais</a>
     </>
   )
 }

@@ -1,5 +1,8 @@
 import OpinionsSlider from "/src/pages/home/OpinionsSlider"
-import "/src/pages/home/HomePage.css"
+import HeaderAd from "/src/pages/home/HeaderAd"
+
+// import "/src/pages/home/HomePage.css"
+
 import opinions from "/src/pages/home/opinions"
 
 const HomePage = () => {
@@ -8,6 +11,7 @@ const HomePage = () => {
 
       <header>
         <OpinionsSlider opinions={opinions} />
+        <HeaderAd />
       </header>
 
       <main>Home Page Main</main>

@@ -1,0 +1,5 @@
+.header-add {
+    height: 250px;
+    background-color: var(--clr-bg-secondary);
+    margin: 1rem 0;
+}
