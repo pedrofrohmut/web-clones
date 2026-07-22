@@ -1,4 +1,5 @@
 .home-content {
+    margin-top: 3.5rem;
     display: grid;
     grid-template-areas: "left right";
     grid-template-columns: 1fr 300px;
@@ -36,6 +37,13 @@
 .home-article-img {
     background-color: var(--clr-bg-secondary);
     margin-bottom: 0.4rem;
+    padding: 2rem;
+}
+
+.home-article-subtitle {
+    font-size: var(--fs-small);
+    font-weight: var(--fw-regular);
+    color: var(--clr-fg-secondary);
 }
 
 /* Featured Articles */
@@ -66,9 +74,6 @@
 }
 
 .featured-article-wide__subtitle {
-    font-size: var(--fs-small);
-    font-weight: var(--fw-regular);
-    color: var(--clr-fg-secondary);
 }
 
 .featured-article-small {
@@ -85,4 +90,98 @@
 
 .featured-article-big__img {
     aspect-ratio: 785 / 530;
+}
+
+/* Sidebar */
+
+.home-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+/* Newsletter Form */
+
+.newsletter {
+    border: 2px solid var(--clr-gray-35);
+    border-radius: var(--border-radius-6);
+    background-color: var(--clr-gray-20);
+    padding: 1.2rem 1.8rem;
+}
+
+.newsletter__title {
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-bold);
+    margin-bottom: 1.2rem;
+}
+
+.newsletter__label {
+    display: block;
+    font-size: var(--fs-small);
+    margin-bottom: 0.6rem;
+}
+
+.newsletter__input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    background-color: var(--clr-gray-35);
+    color: var(--clr-fg);
+    border: 0;
+    border-radius: var(--border-radius-4);
+    padding: 0.4rem 0.9rem;
+    font-size: var(--fs-small);
+    margin-bottom: 1.2rem;
+}
+
+.newsletter__submit {
+    border: 0;
+    border-radius: var(--border-radius-4);
+    padding: 0.4rem 0.9rem;
+    width: 100%;
+    background-color: var(--clr-blue-65);
+    color: var(--clr-blue-90);
+    font-size: var(--fs-regular);
+}
+
+.sidebar__featured-video,
+.sidebar__ad,
+.sidebar__ad-bigger {
+    padding: 2rem;
+    background-color: var(--clr-bg-secondary);
+}
+
+.sidebar__featured-video {
+    aspect-ratio: 190 / 100;
+}
+
+.sidebar__ad {
+    aspect-ratio: 110 / 100;
+}
+
+.sidebar__ad-bigger {
+    aspect-ratio: 1 / 2;
+}
+
+/* Sidebar Latest Posts */
+
+.sidebar__latest-posts {}
+
+/* Use the border-bottom on elements but the last to simulate a separator (CSS only) */
+.latest-post {
+    border-bottom: 2px solid var(--clr-gray-25);
+    padding: 2rem 0;
+}
+
+.latest-post:last-child {
+    border-bottom: 0;
+}
+
+.latest-post__title {
+    font-size: var(--fs-regular);
+    color: var(--clr-gray-90);
+}
+
+latest-post__subtitle {
+    font-size: var(--fs-small);
 }

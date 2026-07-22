@@ -74,6 +74,9 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --fw-bolder: 900;
 
     --fs-extra-small: 0.8rem;
+    --fs-small: 0.9rem;
+    --fs-regular: 1.0rem;
+    --fs-medium: 1.2rem;
     --fs-large: 1.8rem;
     --fs-extra-large: 2.2rem;
 
@@ -84,6 +87,10 @@ the public folder you would have to keep hitting the F5 (refresh key) */
 
     --border-radius-6: 0.6rem;
     --border-radius-4: 0.4rem;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
 }
 
 /* Utils */
