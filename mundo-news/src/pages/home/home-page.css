@@ -16,8 +16,9 @@
 
 .home-article-topic {
     text-transform: uppercase;
-    font-weight: var(--fw-light);
+    font-weight: var(--fw-regular);
     font-size: var(--fs-extra-small);
+    color: var(--clr-gray-60);
     letter-spacing: 1px;
     margin-bottom: 0.2rem;
 }
@@ -29,7 +30,16 @@
 
 .home-article-author {
     font-size: var(--fs-extra-small);
-    font-weight: var(--fw-light);
+    font-weight: var(--fw-regular);
+    color: var(--clr-gray-60);
+    font-style: italic;
+    margin-bottom: 0.4rem;
+}
+
+.home-article-date {
+    font-size: var(--fs-extra-small);
+    font-weight: var(--fw-regular);
+    color: var(--clr-gray-60);
     font-style: italic;
     margin-bottom: 0.4rem;
 }
@@ -163,7 +173,7 @@
     aspect-ratio: 1 / 2;
 }
 
-/* Sidebar Latest Posts */
+/* Sidebar - Latest Posts */
 
 .sidebar__latest-posts {}
 
@@ -184,4 +194,120 @@
 
 latest-post__subtitle {
     font-size: var(--fs-small);
+}
+
+/* Sidebar - Most Read */
+
+.sidebar__most-read {
+    /* Setup a counter to use in the articles ::before pseudo elements */
+    /* CSS Only numbers for the articles */
+    counter-reset: most-read;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.most-read__header {
+    font-size: var(--fs-extra-large);
+    font-weight: var(--fw-bold);
+}
+
+.most-read {
+    position: relative;
+
+    /* Space to place the number of the counter */
+    margin-left: 3.2rem;
+}
+
+.most-read::before {
+    /* Increment the counter everytime you have an most-read article */
+    counter-increment: most-read;
+    content: counter(most-read);
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -3.2rem;
+    font-size: var(--fs-double-extra-large);
+    font-weight: var(--fw-regular);
+    color: var(--clr-blue-80);
+}
+
+.most-read__topic {
+    font-weight: var(--fw-regular);
+    color: var(--clr-gray-60);
+}
+
+.most-read__title {
+    font-size: var(--fs-regular);
+    color: var(--clr-gray-accent);
+}
+
+.most-read__author {
+    display: inline-block;
+}
+
+.most-read__date {
+    display: inline-block;
+    border-left: 2px solid var(--clr-gray-50);
+    padding-left: 0.6rem;
+    margin-left: 0.6rem;
+}
+
+/* Sidebar - Videos */
+
+.sidebar__sidebar-videos {
+    padding: 1.8rem 1.8rem;
+    background-color: var(--clr-bg-accent);
+}
+
+.sidebar-videos__header-title {
+    font-size: var(--fs-extra-large);
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-videos__header-subtitle {
+    font-size: var(--fs-regular);
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    margin-bottom: 2rem;
+}
+
+.sidebar-video__img {
+    aspect-ratio: 16 / 9;
+}
+
+.sidebar-video__date {
+    color: var(--clr-gray-75);
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-small);
+}
+
+.sidebar-video__title {
+    font-size: var(--fs-medium);
+    /* font-weight: var(--fw-bold); */
+}
+
+.sidebar-video__author {
+    font-size: var(--fs-small);
+    color: var(--clr-gray-75);
+}
+
+.sidebar-videos__more-btn {
+    background-color: var(--clr-gray-25);
+    color: var(--clr-gray-85);
+    border: 0;
+    border-radius: var(--border-radius-4);
+    padding: 1rem 2.8rem;
+    font-size: var(--fs-medium);
+
+    display: block;
+    margin: 0 auto;
 }

@@ -11,6 +11,7 @@ type Article = {
   author: string
   subtitle?: string
   picture?: string
+  date?: string
 }
 
 const featuredWide: Article = {
@@ -33,7 +34,7 @@ const featuredBig: Article = {
   author: "Tabitha Ramalho",
 }
 
-const latestPosts = [
+const latestPosts: Array<Article> = [
   {
     topic: "Brasil",
     title: "Acusado pelos EUA, Brasil tem mecanismo de combate ao trabalho forçado reconhecido internacionalmente",
@@ -52,6 +53,46 @@ const latestPosts = [
     author: "Victor Farinelli",
     subtitle: "Governo Trump justificou medida afirmando que seriam nações que ‘sem legislação contra trabalho forçado, ou não a aplicam’; relatório de 2023, no entanto, aponta que país têm 1,1 milhão de trabalhadores forçados, mais que Brasil",
   },
+]
+
+const mostRead: Array<Article> = [
+  {
+    topic: "Guerra EUA e Israel x Irã",
+    title: "Irã atinge caças norte-americanos na Jordânia e ataca instalações militares em Omã",
+    author: "Redação",
+    date: "17 de julho",
+  },
+  {
+    topic: "Guerra na Ucrânia",
+    title: "Ataques da Ucrânia servem de alerta, mas não significam enfraquecimento da Rússia, avaliam especialistas",
+    author: "Rocio Paik",
+    date: "19 de julho",
+  },
+  {
+
+    topic: "Pensar a História",
+    title: "Marcha dos Vencidos: a humilhação pública dos nazistas em Moscou",
+    author: "Estevam Silva",
+    date: "17 de julho",
+  }
+]
+
+const sidebarVideos = [
+  {
+    date: "20/07/2026",
+    title: "Irã declara fim do acordo de paz com os EUA: o que muda agora?",
+    author: "Rodamundo",
+  },
+  {
+    date: "19/07/2026",
+    title: "A geopolítica da FIFA para comandar o futebol mundial",
+    author: "Análise de Breno e Tom Altman",
+  },
+  {
+    date: "18/07/2026",
+    title: "A grande final: Argentina vs Espanha na Copa do Mundo 2026",
+    author: "Esquerda Esportiva",
+  }
 ]
 
 const HomePage = () => {
@@ -130,6 +171,38 @@ const HomePage = () => {
 
           {/* Sidebar Ad Bigger */}
           <div className="sidebar__ad-bigger">Sidebar AD</div>
+
+          {/* Sidebar Most Read*/}
+          <div className="sidebar__most-read">
+            <div className="most-read__header">Mais Lidas</div>
+            {mostRead.map((article: Article) => (
+              <div className="most-read">
+                <div className="most-read__topic home-article-topic">{article.topic}</div>
+                <div className="most-read__title home-article-title">{article.title}</div>
+                <div className="most-read__author home-article-author">{article.author}</div>
+                <div className="most-read__date home-article-date">{article.date}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Sidebar Videos */}
+          <div className="sidebar__sidebar-videos">
+            <div className="sidebar-videos__header-title">Vídeos</div>
+            <div className="sidebar-videos__header-subtitle">Mais vídeos para você curtir</div>
+
+            <div className="sidebar-videos">
+              {sidebarVideos.map(video => (
+                <div className="sidebar-video">
+                  <div className="sidebar-video__img home-article-img">Video img</div>
+                  <div className="sidebar-video__date home-article-date">{video.date}</div>
+                  <div className="sidebar-video__title home-article-title">{video.title}</div>
+                  <div className="sidebar-video__author home-article-author">{video.author}</div>
+                </div>
+              ))}
+            </div>
+
+            <button className="sidebar-videos__more-btn">Ver todos <i className="fa-solid fa-chevron-right"></i></button>
+          </div>
 
         </div>
 
