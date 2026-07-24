@@ -28,6 +28,11 @@
     margin-bottom: 0.4rem;
 }
 
+.home-article-title-small {
+    font-size: var(--fs-medium);
+    margin-bottom: 0.4rem;
+}
+
 .home-article-author {
     font-size: var(--fs-extra-small);
     font-weight: var(--fw-regular);
@@ -110,13 +115,108 @@
     margin-bottom: 2rem;
 }
 
-.article-1__title,
-.article-2__title {
-    font-size: var(--fs-medium);
-}
-
 .article-2__img {
     aspect-ratio: 16 / 10;
+}
+
+/* Revista Mundo */
+
+.home-content__revista-mundo {}
+
+.revista-mundo__header {
+    color: var(--clr-blue-70);
+    margin-bottom: 2rem;
+}
+
+.revista-mundo__header-1 {
+    line-height: 0.75;
+}
+
+.revista-mundo__header-1 span {
+    font-size: 1.6rem;
+    letter-spacing: 3px;
+    font-weight: var(--fw-light);
+}
+
+.revista-mundo__header-1 .fa-star {
+    font-size: 0.7rem;
+    position: relative;
+    top: -3px;
+    left: 5px;
+}
+
+.revista-mundo__header-2 {
+    font-size: 4.5rem;
+    font-weight: var(--fw-bold);
+    line-height: 0.9;
+    display: block;
+    text-transform: uppercase;
+}
+
+.revista-mundo__articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.revista-mundo-article__img {
+    aspect-ratio: 16 / 10;
+}
+
+/* Dialogos sul */
+
+.home-content__dialogos-sul {}
+
+.dialogos-sul__header {
+    font-weight: var(--fw-bold);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dialogos-sul__header .fa-compass {
+    font-size: 1.8rem;
+    color: var(--clr-gray-45);
+}
+
+.dialogos-sul__header span:nth-child(2) {
+    font-size: 2rem;
+    color: var(--clr-yellow);
+}
+
+.dialogos-sul__header span:nth-child(3) {
+    font-size: 2rem;
+    color: var(--clr-blue-60);
+}
+
+.dialogos-sul__header span:nth-child(4) {
+    font-size: 2rem;
+    color: var(--clr-blue-80);
+}
+
+.dialogos-sul__header span:nth-child(5) {
+    font-size: 1.2rem;
+    font-weight: var(--fw-light);
+    color: var(--clr-blue-90);
+}
+
+.dialogos-sul__articles {
+    margin-bottom: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.dialogos-sul-article__img {
+    aspect-ratio: 16 / 10;
+}
+
+.dialogos-sul__ad {
+    height: 240px;
 }
 
 /* Sidebar */

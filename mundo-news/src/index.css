@@ -131,3 +131,9 @@ input {
     padding: 2rem;
     font-size: var(--fs-medium);
 }
+
+.divisor-line {
+    background-color: var(--clr-bg-secondary);
+    height: 1px;
+    margin: 3rem 0;
+}

@@ -150,6 +150,54 @@ const articles2 = [
   },
 ]
 
+const revistaArticles = [
+  {
+    title: "Gaza: o amor em tempos de genocídio",
+    author: "Electronic Intifada",
+  },
+  {
+    title: "Aborto: o custo da hesitação",
+    author: "ARENA",
+  },
+  {
+    title: "O Irã é um parceiro indispensável da China, mas Pequim nunca lutará sua guerra",
+    author: "Middle East Monitor",
+  },
+]
+
+const dialogosDoSulArticles = [
+  {
+    topic: "América Latina",
+    title: "Agressão à vista? Cuba acusa EUA de prepararem terreno para ataque militar",
+    author: "George Guariento",
+  },
+  {
+    topic: "Brasil",
+    title: "Cannabrava | Brasil, um narcoestado?",
+    author: "George Guariento",
+  },
+  {
+    topic: "América Latina",
+    title: "Antes da posse, De la Espriella entrega Medellín ao Escudo das Américas e lança Colômbia nos braços dos EUA",
+    author: "George Guariento",
+  },
+  {
+    topic: "América Latina",
+    title: "Relatório dos EUA acusa Cuba de comandar rede que formou a esquerda estadunidense",
+    author: "George Guariento",
+  },
+  {
+    topic: "Cultura",
+    title: "Fiocruz e GGN debatem como saúde, educação e cultura podem gerar empregos e fortalecer a soberania",
+    author: "George Guariento",
+  },
+  {
+    topic: "Cultura",
+    title: "Frei Betto | O açúcar das estrelas",
+    author: "George Guariento",
+  },
+]
+
 const HomePage = () => {
   return (
     <div className="container">
@@ -198,9 +246,9 @@ const HomePage = () => {
           {/* First line of article after featured - Article without img */}
           <div className="home-content__articles-1">
             {articles1.map(article => (
-              <div className="article-1">
+              <div className="article-1" key={article.title}>
                 <div className="article-1__topic home-article-topic">{article.topic}</div>
-                <div className="article-1__title home-article-title">{article.title}</div>
+                <div className="article-1__title home-article-title-small">{article.title}</div>
                 <div className="article-1__author home-article-author">{article.author}</div>
                 <div className="article-1__subtitle home-article-subtitle">{article.subtitle}</div>
               </div>
@@ -210,14 +258,73 @@ const HomePage = () => {
           {/* Second and Third lines after featured - Articles with img */}
           <div className="home-content__articles-2">
             {articles2.map(article => (
-              <div className="article-2">
+              <div className="article-2" key={article.title}>
                 <div className="article-2__img home-article-img placeholder-img">Articles 2</div>
                 <div className="article-2__topic home-article-topic">{article.topic}</div>
-                <div className="article-2__title home-article-title">{article.title}</div>
+                <div className="article-2__title home-article-title-small">{article.title}</div>
                 <div className="article-2__author home-article-author">{article.author}</div>
               </div>
             ))}
           </div>
+
+          <div className="divisor-line"></div>
+
+          <div className="home-content__revista-mundo">
+
+            {/* Pure CSS logo instead of image */}
+            <div className="revista-mundo__header">
+              <div className="revista-mundo__header-1">
+                <span>revista</span>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <span className="revista-mundo__header-2">mundo</span>
+            </div>
+
+            <div className="revista-mundo__articles">
+              {revistaArticles.map(article => (
+                <div className="revista-mundo-article" key={article.title}>
+                  <div className="revista-mundo-article__img home-article-img placeholder-img">Revista Mundo</div>
+                  <div className="revista-mundo-article__title home-article-title-small">{article.title}</div>
+                  <div className="revista-mundo-article__author home-article-author">{article.author}</div>
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+          <div className="divisor-line"></div>
+
+          <div className="home-content__dialogos-sul">
+
+            <div className="dialogos-sul__header">
+              <i className="fa-solid fa-compass"></i> {" "}
+              <span>Diálogos</span> {" "}
+              <span>do</span> {" "}
+              <span>Sul</span> {" "}
+              <span>Global</span>
+            </div>
+
+            <div className="dialogos-sul__articles">
+              {dialogosDoSulArticles.map(article => (
+                <div className="dialoges-sul-article">
+                  <div className="dialogos-sul-article__img home-article-img placeholder-img">Dialogos Do Sul Global</div>
+                  <div className="dialogos-sul-article__topic home-article-topic">{article.topic}</div>
+                  <div className="dialogos-sul-article__title home-article-title-small">{article.title}</div>
+                  <div className="dialogos-sul-article__author home-article-author">{article.author}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Ad section below dialogos-sul */}
+            <div className="dialogos-sul__ad placeholder-img">Dialogos Do Sul Global AD</div>
+
+          </div>
+
+          <div className="divisor-line"></div>
+
+          <div className="home-content__selection">Seleção</div>
+
+          <div className="divisor-line"></div>
 
         </div>
 
