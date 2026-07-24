@@ -1,5 +1,6 @@
 import OpinionsSlider from "/src/pages/home/OpinionsSlider"
 import HeaderAd from "/src/pages/home/HeaderAd"
+import MiddleAd from "/src/pages/home/MiddleAd"
 
 import "/src/pages/home/home-page.css"
 
@@ -95,6 +96,60 @@ const sidebarVideos = [
   }
 ]
 
+const articles1 = [
+  {
+    topic: "Brasil",
+    title: "Apesar das tarifas de Trump, FMI reconhece que governo Lula está fortalecendo a economia",
+    author: "Redação",
+    subtitle: "Organismo internacional destacou solidez do sistema bancário e reforma do IVA, além da 'notável resiliência diante de múltiplos choques' econômicos",
+  },
+  {
+    topic: "Israel x Palestina",
+    title: "Mais de 4.200 colonos israelenses invadem mesquita de Al-Aqsa",
+    author: "Redação Opera Mundi",
+    subtitle: "Ben-Gvir acompanhou a maior incursão deste ano durante feriado judaico; autoridades palestinas denunciam agressões contra estudantes e fiéis como 'escala perigosa'",
+  },
+  {
+    topic: "Europa",
+    title: "Alemanha aprova projeto nuclear conjunto franco-russo",
+    author: "Redação Opera Mundi",
+    subtitle: "Joint venture entre Framatome e Rosatom produzirá combustível para reatores; governo alemão impõe condições rigorosas e proíbe entrada de russos na usina",
+  }
+]
+
+const articles2 = [
+  {
+    topic: "Guerra na Ucrânia",
+    title: "Chanceler russo diz a Rubio que política europeia de armar Ucrânia é ‘inaceitável’",
+    author: "Tatiana Carlotti",
+  },
+  {
+    topic: "América Latina",
+    title: "Congressistas dos EUA criticam relatório contra Cuba: ‘disparate paranoico’",
+    author: "Redação",
+  },
+  {
+    topic: "Ásia",
+    title: "‘Movimentos das baratas’: premiê indiano promete ‘tribunais de julgamentos rápidos’ por vazamento de provas",
+    author: "Tabitha Ramalho",
+  },
+  {
+    topic: "Pensar a História",
+    title: "Da glória à tragédia: o Brasil se despede de Santos Dumont",
+    author: "Estevam Silva",
+  },
+  {
+    topic: "América Latina",
+    title: "Milei nomeia juízes e procuradores com vínculos familiares e empresariais",
+    author: "Redação",
+  },
+  {
+    topic: "América Latina",
+    title: "EUA arrecadaram US$ 13 bilhões com venda de petróleo da Venezuela em 2026, afirma jornal",
+    author: "Redação Opera Mundi",
+  },
+]
+
 const HomePage = () => {
   return (
     <div className="container">
@@ -120,7 +175,7 @@ const HomePage = () => {
 
             {/* Featured Article Small */}
             <div className="featured-article-small">
-              <div className="featured-article-small__img home-article-img">small article img</div>
+              <div className="featured-article-small__img home-article-img placeholder-img">small article img</div>
               <div className="featured-article-small__topic home-article-topic">{featuredSmall.topic}</div>
               <div className="featured-article-small__title home-article-title">{featuredSmall.title}</div>
               <div className="featured-article-small__author home-article-author">{featuredSmall.author}</div>
@@ -129,12 +184,39 @@ const HomePage = () => {
 
             {/* Featured Article Big */}
             <div className="featured-article-big">
-              <div className="featured-article-big__img home-article-img">big article img</div>
+              <div className="featured-article-big__img home-article-img placeholder-img">big article img</div>
               <div className="featured-article-big__topic home-article-topic">{featuredBig.topic}</div>
               <div className="featured-article-big__title home-article-title">{featuredBig.title}</div>
               <div className="featured-article-big__author home-article-author">{featuredBig.author}</div>
             </div>
 
+          </div>
+
+          {/* Ad section in the middle of the home-content */}
+          <MiddleAd />
+
+          {/* First line of article after featured - Article without img */}
+          <div className="home-content__articles-1">
+            {articles1.map(article => (
+              <div className="article-1">
+                <div className="article-1__topic home-article-topic">{article.topic}</div>
+                <div className="article-1__title home-article-title">{article.title}</div>
+                <div className="article-1__author home-article-author">{article.author}</div>
+                <div className="article-1__subtitle home-article-subtitle">{article.subtitle}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Second and Third lines after featured - Articles with img */}
+          <div className="home-content__articles-2">
+            {articles2.map(article => (
+              <div className="article-2">
+                <div className="article-2__img home-article-img placeholder-img">Articles 2</div>
+                <div className="article-2__topic home-article-topic">{article.topic}</div>
+                <div className="article-2__title home-article-title">{article.title}</div>
+                <div className="article-2__author home-article-author">{article.author}</div>
+              </div>
+            ))}
           </div>
 
         </div>
@@ -152,10 +234,10 @@ const HomePage = () => {
           </div>
 
           {/* Featured Sidebar Video */}
-          <div className="sidebar__featured-video">Sidebar video</div>
+          <div className="sidebar__featured-video placeholder-img">Sidebar video</div>
 
           {/* Sidebar Ad */}
-          <div className="sidebar__ad">Sidebar AD</div>
+          <div className="sidebar__ad placeholder-img">Sidebar AD</div>
 
           {/* Sidebar Latest Posts */}
           <div className="sidebar__latest-posts">
@@ -170,7 +252,7 @@ const HomePage = () => {
           </div>
 
           {/* Sidebar Ad Bigger */}
-          <div className="sidebar__ad-bigger">Sidebar AD</div>
+          <div className="sidebar__ad-bigger placeholder-img">Sidebar AD</div>
 
           {/* Sidebar Most Read*/}
           <div className="sidebar__most-read">
@@ -193,7 +275,7 @@ const HomePage = () => {
             <div className="sidebar-videos">
               {sidebarVideos.map(video => (
                 <div className="sidebar-video">
-                  <div className="sidebar-video__img home-article-img">Video img</div>
+                  <div className="sidebar-video__img home-article-img placeholder-img">Video img</div>
                   <div className="sidebar-video__date home-article-date">{video.date}</div>
                   <div className="sidebar-video__title home-article-title">{video.title}</div>
                   <div className="sidebar-video__author home-article-author">{video.author}</div>

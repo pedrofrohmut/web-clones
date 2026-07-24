@@ -125,3 +125,9 @@ button,
 input {
     font-family: "Noto Serif", serif;
 }
+
+.placeholder-img {
+    background-color: var(--clr-bg-secondary);
+    padding: 2rem;
+    font-size: var(--fs-medium);
+}
