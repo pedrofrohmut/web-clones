@@ -1,6 +1,7 @@
 import OpinionsSlider from "/src/pages/home/OpinionsSlider"
 import HeaderAd from "/src/pages/home/HeaderAd"
 import MiddleAd from "/src/pages/home/MiddleAd"
+import SelectionSection from "/src/pages/home/SelectionSection"
 
 import "/src/pages/home/home-page.css"
 
@@ -198,6 +199,137 @@ const dialogosDoSulArticles = [
   },
 ]
 
+const selectionSections = [
+  {
+    topic: "Oriente Médio",
+    articles: [
+      {
+        title: "EUA confirmam ‘ataques adicionais’ contra Irã após Trump afirmar fim do acordo de paz",
+        author: "Raissa Neves",
+      },
+      {
+        title: "‘Israel tentou transformar sul do Líbano em zona morta’, denuncia prefeito de Nabatieh",
+        author: "Stefani Costa",
+      },
+      {
+        title: "Governo Netanyahu aprova treze novos assentamentos na Cisjordânia ocupada",
+        author: "Tabitha Ramalho",
+      },
+      {
+        title: "Vereadores do PSOL afirmam que não participaram da votação, e são contrários a projeto de lei pró-sionista",
+        author: "Fernanda Forgerini",
+      },
+    ],
+  },
+  {
+    topic: "Opera Entrevista",
+    articles: [
+      {
+        title: "‘Trump caça motivos para punir África do Sul’, diz acadêmica sul-africana",
+        author: "Tatiana Carlotti",
+      }
+    ]
+  },
+  {
+    topic: "Opinião",
+    articles: [
+      {
+        title: "O espectro socialista avança nos EUA",
+        author: "Jana Silverman",
+      },
+      {
+        title: "Mil dias de fracassos de Israel na Faixa de Gaza",
+        author: "Sayid Marcos Tenório",
+      },
+      {
+        title: "Irã: a opressão contra as mulheres",
+        author: "Tom Altman",
+      },
+      {
+        title: "A metamorfose da NED: da Guerra Híbrida para Guerra Digital",
+        author: "Iara Vidal, Isabela Shi",
+      },
+      {
+        title: "200 anos do Congresso do Panamá: o início do sonho da integração latino-americana",
+        author: "Ana Prestes",
+      },
+    ]
+  },
+  {
+    topic: "Pensar a História",
+    articles: [
+      {
+        title: "Transformando a dor em arte: trajetória de Frida Kahlo",
+        author: "Estevam Silva",
+      },
+      {
+        title: "Julgamento de Galileu: inquisição condena o pai da ciência moderna",
+        author: "Estevam Silva",
+      },
+    ]
+  },
+  {
+    topic: "Especial Copa",
+    articles: [
+      {
+        title: "Adversário do Brasil na Copa, Marrocos convive com movimento de libertação nacional desde 1975",
+        author: "Tabitha Ramalho",
+      },
+      {
+        title: "Adversário do Brasil na Copa, Haiti vive crise agravada pelos militares brasileiros, diz especialista",
+        author: "Raissa Neves",
+      },
+      {
+        title: "Rival do Brasil na Copa, Escócia amarga efeitos do Brexit, do qual foi contra",
+        author: "Tatiana Carlotti",
+      }
+    ]
+  },
+  {
+    topic: "Copa do Mundo",
+    articles: [
+      {
+        title: "Rival do Brasil na Copa, Japão lida com posição estratégica na disputa entre EUA e China",
+        author: "Victor Farinelli",
+      },
+      {
+        title: "Do fascismo ao futebol: o Brasil que neonazista norueguês odiava vai a campo contra seu país",
+        author: "Rocio Paik",
+      },
+    ]
+  },
+  {
+    topic: "Esportes",
+    articles: [
+      {
+        title: "Subserviência da FIFA a Trump faz desta edição a ‘Copa da Exclusão’, diz jornalista",
+        author: "Rocio Paik",
+      },
+      {
+        title: "Copa expõe contraste entre política migratória na Europa e diversidade das seleções",
+        author: "Lucila Runnacles",
+      },
+    ]
+  },
+  {
+    topic: "Futebol",
+    articles: [
+      {
+        title: "Casagrande presenteia Mamdani com camiseta da Democracia Corinthiana",
+        author: "Victor Farinelli",
+      },
+      {
+        title: "Cabo Verde volta dos EUA com zero vitórias e a história mais bonita da Copa",
+        author: "Victor Farinelli",
+      },
+      {
+        title: "Sob condições injustas, Irã é eliminado mas sai invicto da Copa nos EUA",
+        author: "Victor Farinelli",
+      },
+    ]
+  }
+]
+
 const HomePage = () => {
   return (
     <div className="container">
@@ -306,7 +438,7 @@ const HomePage = () => {
 
             <div className="dialogos-sul__articles">
               {dialogosDoSulArticles.map(article => (
-                <div className="dialoges-sul-article">
+                <div className="dialoges-sul-article" key={article.title}>
                   <div className="dialogos-sul-article__img home-article-img placeholder-img">Dialogos Do Sul Global</div>
                   <div className="dialogos-sul-article__topic home-article-topic">{article.topic}</div>
                   <div className="dialogos-sul-article__title home-article-title-small">{article.title}</div>
@@ -322,7 +454,34 @@ const HomePage = () => {
 
           <div className="divisor-line"></div>
 
-          <div className="home-content__selection">Seleção</div>
+          <div className="home-content__selection">
+            <div className="selection__header">Seleção</div>
+
+            {/* Sections selected manually so they can be place in the right columns */}
+            <div className="selection__sections">
+
+              <div className="col-1">
+                <SelectionSection section={selectionSections[0]} />
+                <SelectionSection section={selectionSections[1]} />
+              </div>
+
+              <div className="col-2">
+                <SelectionSection section={selectionSections[2]} />
+                <SelectionSection section={selectionSections[3]} />
+              </div>
+
+              <div className="col-3">
+                <SelectionSection section={selectionSections[4]} />
+                <SelectionSection section={selectionSections[5]} />
+              </div>
+
+              <div className="col-4">
+                <SelectionSection section={selectionSections[6]} />
+                <SelectionSection section={selectionSections[7]} />
+              </div>
+            </div>
+
+          </div>
 
           <div className="divisor-line"></div>
 
@@ -365,7 +524,7 @@ const HomePage = () => {
           <div className="sidebar__most-read">
             <div className="most-read__header">Mais Lidas</div>
             {mostRead.map((article: Article) => (
-              <div className="most-read">
+              <div className="most-read" key={article.title}>
                 <div className="most-read__topic home-article-topic">{article.topic}</div>
                 <div className="most-read__title home-article-title">{article.title}</div>
                 <div className="most-read__author home-article-author">{article.author}</div>
@@ -381,7 +540,7 @@ const HomePage = () => {
 
             <div className="sidebar-videos">
               {sidebarVideos.map(video => (
-                <div className="sidebar-video">
+                <div className="sidebar-video" key={video.title}>
                   <div className="sidebar-video__img home-article-img placeholder-img">Video img</div>
                   <div className="sidebar-video__date home-article-date">{video.date}</div>
                   <div className="sidebar-video__title home-article-title">{video.title}</div>

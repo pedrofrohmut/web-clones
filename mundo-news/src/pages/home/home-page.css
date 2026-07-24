@@ -219,6 +219,51 @@
     height: 240px;
 }
 
+/* Selection */
+
+.home-content__selection {
+}
+
+.selection__header {
+    font-size: var(--fs-extra-large);
+    margin-bottom: 2rem;
+}
+
+.selection__sections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.selection-section {
+    border-bottom: 3px solid var(--clr-bg-secondary);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.selection-section:last-child {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.selection-article {
+    margin-bottom: 2rem;
+}
+
+.selection-article:last-child {
+    margin-bottom: 0;
+}
+
+.selection-section__topic {
+    font-size: var(--fs-regular);
+    margin-bottom: 1.2rem;
+}
+
+.selection-article__title {
+    font-size: 1.1rem;
+}
+
 /* Sidebar */
 
 .home-sidebar {
