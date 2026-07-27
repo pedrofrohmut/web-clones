@@ -1,0 +1,108 @@
+.layout-footer {
+    margin-top: 2.5rem;
+    padding: 2.5rem 0 5rem;
+    background-color: var(--clr-gray-10);
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+    column-rule: 2px solid var(--clr-gray-25); /* Adds the divisor line in the gap */
+}
+
+.footer-container section {
+    padding: 1rem 0;
+}
+
+/* About section */
+.footer-about__logo {
+    margin-bottom: 0.6rem;
+}
+
+.footer-about__address {
+    font-size: var(--fs-small);
+    line-height: 1.5;
+}
+
+/* nav-links and topics sections */
+
+.footer__nav-links ul,
+.footer__topics ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer__nav-links a,
+.footer__topics a {
+    --color: var(--clr-fg);
+    color: var(--color);
+    text-decoration: none;
+    font-size: var(--fs-regular);
+    position: relative;
+}
+
+/* Social links section */
+
+.footer-socials {
+    display: grid;
+    gap: 1rem;
+}
+
+.footer-socials__header {
+    font-size: var(--fs-regular);
+    margin-bottom: 1.0rem;
+}
+
+.footer-socials__links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    display: grid;
+    gap: 0.75rem;
+}
+
+.footer-socials__links.socials i {
+    font-size: 1.3rem;
+    margin-right: 0.3rem;
+    position: relative;
+    top: 3px;
+}
+
+.footer-socials__links.socials a {
+    font-size: 1rem;
+}
+
+/* Footer contact section */
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* So the button wont auto strech */
+    gap: 1.0rem;
+}
+
+.footer-contact__header {
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-bold);
+}
+
+.footer-contact__subheader {
+    font-size: var(--fs-small);
+}
+
+.footer-contact__submit {
+    border: 0;
+    border-radius: var(--border-radius-4);
+    color: var(--clr-fg);
+    background-color: var(--clr-blue);
+    padding: 0.4rem 1.4rem;
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-bold);
+}

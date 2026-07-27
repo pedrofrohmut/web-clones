@@ -2,6 +2,7 @@ import OpinionsSlider from "/src/pages/home/OpinionsSlider"
 import HeaderAd from "/src/pages/home/HeaderAd"
 import MiddleAd from "/src/pages/home/MiddleAd"
 import SelectionSection from "/src/pages/home/SelectionSection"
+import MainLogo from "/src/pages/home/MainLogo"
 
 import "/src/pages/home/home-page.css"
 
@@ -483,7 +484,7 @@ const HomePage = () => {
 
           </div>
 
-          <div className="divisor-line"></div>
+          {/* <div className="divisor-line"></div> */}
 
         </div>
 
@@ -527,8 +528,10 @@ const HomePage = () => {
               <div className="most-read" key={article.title}>
                 <div className="most-read__topic home-article-topic">{article.topic}</div>
                 <div className="most-read__title home-article-title">{article.title}</div>
-                <div className="most-read__author home-article-author">{article.author}</div>
-                <div className="most-read__date home-article-date">{article.date}</div>
+                <div className="most-read__footer">
+                  <span className="most-read__author home-article-author">{article.author}</span>
+                  <span className="most-read__date home-article-date">{article.date}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -549,14 +552,14 @@ const HomePage = () => {
               ))}
             </div>
 
-            <button className="sidebar-videos__more-btn">Ver todos <i className="fa-solid fa-chevron-right"></i></button>
+            <button className="sidebar-videos__more-btn">
+              Ver todos <i className="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
 
         </div>
 
       </main>
-
-      <footer>Home Page footer</footer>
 
     </div>
   )

@@ -1,6 +1,8 @@
 import { useState } from "react"
 
-import "/src/layout/header.css"
+import MainLogo from "/src/shared/MainLogo"
+
+import "/src/layout/layout-header.css"
 
 /*
   TODO: make the topics list dynamic. Make it have as many elements that can fit
@@ -54,9 +56,7 @@ const Header = () => {
       <div className="header-main">
         <div className="header-main__weather">Weather app</div>
 
-        <h1 className="header-main__title">
-          <span className="header-main__title-accent">Mundo</span> News
-        </h1>
+        <MainLogo className="header-main__logo" size={68} />
 
         <button className="header-main__apoie">Apoie</button>
       </div>

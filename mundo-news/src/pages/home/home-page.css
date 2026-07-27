@@ -232,27 +232,21 @@
 .selection__sections {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
-.selection-section {
-    border-bottom: 3px solid var(--clr-bg-secondary);
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
+.selection__sections > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    row-rule: 3px solid var(--clr-bg-secondary);
 }
 
-.selection-section:last-child {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-.selection-article {
-    margin-bottom: 2rem;
-}
-
-.selection-article:last-child {
-    margin-bottom: 0;
+.selection-section__articles {
+    display: flex;
+    flex-direction: column;
+    gap: 2.0rem;
+    row-rule: 1px dashed var(--clr-bg-secondary);
 }
 
 .selection-section__topic {
@@ -330,16 +324,11 @@
 
 /* Sidebar - Latest Posts */
 
-.sidebar__latest-posts {}
-
-/* Use the border-bottom on elements but the last to simulate a separator (CSS only) */
-.latest-post {
-    border-bottom: 2px solid var(--clr-gray-25);
-    padding: 2rem 0;
-}
-
-.latest-post:last-child {
-    border-bottom: 0;
+.sidebar__latest-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    row-rule: 2px solid var(--clr-bg-secondary);
 }
 
 .latest-post__title {
@@ -392,22 +381,25 @@ latest-post__subtitle {
 .most-read__topic {
     font-weight: var(--fw-regular);
     color: var(--clr-gray-60);
+    margin-bottom: 0.4rem;
 }
 
 .most-read__title {
     font-size: var(--fs-regular);
     color: var(--clr-gray-accent);
+    margin-bottom: 0.4rem;
 }
 
-.most-read__author {
-    display: inline-block;
+.most-read__footer {
+    display: flex;
+    gap: 1.8rem;
+    column-rule: 2px solid var(--clr-bg-secondary);
 }
 
-.most-read__date {
-    display: inline-block;
-    border-left: 2px solid var(--clr-gray-50);
-    padding-left: 0.6rem;
-    margin-left: 0.6rem;
+.most-read__footer span {
+    line-height: 0.9;
+    position: relative;
+    top: 2px;
 }
 
 /* Sidebar - Videos */

@@ -89,16 +89,9 @@
     height: 75px;
 }
 
-.header-main__title {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 3.8rem;
+.header-main__logo {
     padding: 2.85rem 0;
-    margin: 0;
-}
-
-.header-main__title-accent {
-    color: var(--clr-blue);
+    text-align: center;
 }
 
 .header-main__apoie {

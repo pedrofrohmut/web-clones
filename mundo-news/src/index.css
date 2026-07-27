@@ -44,7 +44,7 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --clr-gray-20: #302c3a;
     --clr-gray-15: #24212c;
     --clr-gray-10: #18161d;
-    --clr-gray-5:  #0c0b0f;
+    --clr-gray-05: #0c0b0f;
 
     /* Blues - from base color #3366ff */
     --clr-blue-95: #e6ebff;
@@ -65,7 +65,7 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --clr-blue-20: #001866;
     --clr-blue-15: #00124d;
     --clr-blue-10: #000c33;
-    --clr-blue-5:  #00061a;
+    --clr-blue-05  #00061a;
 
     --container-width: min(1400px, 90vw);
 
@@ -136,4 +136,45 @@ input {
     background-color: var(--clr-bg-secondary);
     height: 1px;
     margin: 3rem 0;
+}
+
+.underscored {
+    --main-color: var(--clr-gray-65);
+    --hover-color: var(--clr-gray-85);
+    position: relative;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.underscored::after {
+    content: "";
+    display: block;
+    background-color: var(--color);
+    height: 2px;
+    width: 80%;
+    left: 10%;
+    position: absolute;
+}
+
+.underscored:hover {
+    color: var(--hover-color);
+}
+
+.underscored:hover::after {
+    background-color: var(--clr-hover-color);
+}
+
+/* Socials - Global styles */
+
+.socials a {
+    color: var(--clr-gray-70);
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    width: 1.8rem;
+    position: relative;
+}
+
+.socials a:hover {
+    filter: var(--brightness-40);
 }
