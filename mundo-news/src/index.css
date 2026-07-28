@@ -119,9 +119,8 @@ body {
     font-size: 1rem;
     font-family: "Noto Serif", serif;
 
-    /* TODO: Check this stuff later */
     font-synthesis: none;
-    text-rendering: optimizeLegibility;
+    text-rendering: optimizeLegibility; /* TODO: This may impact performance. Remove TODO later if it okay */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
