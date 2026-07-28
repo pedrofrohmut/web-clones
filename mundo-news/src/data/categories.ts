@@ -30,4 +30,9 @@ export const categories = [
     link: "category/politica-e-economia",
     title: "Política e Economia"
   },
+  {
+    name: "opinion",
+    link: "category/opinion",
+    title: "Opinião"
+  }
 ]

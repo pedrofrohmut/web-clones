@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import { Link } from "react-router"
 
 import { textLimit } from "/src/utils/text"
 
@@ -143,7 +144,7 @@ const OpinionsSlider: React.FC<OpinionsSliderProps> = ({ opinions }) => {
 
       </div>
 
-      <a href="#" className="opinion-see-more">Ver mais</a>
+      <Link to="category/opinion" className="opinion-see-more">Ver mais</Link>
     </>
   )
 }

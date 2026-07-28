@@ -118,6 +118,12 @@ body {
     font-weight: var(--fw-regular);
     font-size: 1rem;
     font-family: "Noto Serif", serif;
+
+    /* TODO: Check this stuff later */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 button,
