@@ -100,15 +100,14 @@ the public folder you would have to keep hitting the F5 (refresh key) */
 /* Utils */
 
 .container {
-    width: var(--container-width);
+    width: min(1400px, 90vw);
     margin: 0 auto;
 }
 
 /* Global styles by element */
 
-html, body {
-    height: 100%;
-    min-height: 100vw;
+html, body, #root {
+    min-height: 100vh;
     margin: 0;
     padding: 0;
 }
@@ -124,6 +123,16 @@ body {
 button,
 input {
     font-family: "Noto Serif", serif;
+}
+
+a {
+    color: var(--clr-fg);
+    text-decoration: none;
+}
+
+.link {
+    color: var(--clr-blue);
+    text-decoration: underline;
 }
 
 .placeholder-img {
@@ -177,4 +186,11 @@ input {
 
 .socials a:hover {
     filter: var(--brightness-40);
+}
+
+/* Layout: makes middle row grow to occupy available space */
+
+#root {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }

@@ -1,8 +1,17 @@
 import { useState } from "react"
+import { Link } from "react-router"
 
 import MainLogo from "/src/shared/MainLogo"
 
 import "/src/layout/layout-header.css"
+
+const categories = [
+  { link: "category/america-latina", text: "América Latina" },
+  { link: "category/guerra-eua-israeal-e-ira", text: "Guerra EUA e Israel x Irã" },
+  { link: "category/israel-e-palestina", text: "Isreal x Palestina" },
+  { link: "category/mundo-entrevistas", text: "Mundo Entrevistas" },
+  { link: "category/politica-e-economia", text: "Política e Economia" },
+]
 
 /*
   TODO: make the topics list dynamic. Make it have as many elements that can fit
@@ -16,7 +25,7 @@ const Header = () => {
   }
 
   return (
-    <header className="container">
+    <header className="layout-header container">
 
       <div className="header-top">
 
@@ -56,7 +65,9 @@ const Header = () => {
       <div className="header-main">
         <div className="header-main__weather">Weather app</div>
 
-        <MainLogo className="header-main__logo" size={68} />
+        <Link to="/" className="header-main__logo-link">
+          <MainLogo className="header-main__logo" size={68} />
+        </Link>
 
         <button className="header-main__apoie">Apoie</button>
       </div>
@@ -67,24 +78,11 @@ const Header = () => {
 
           <nav className="header-topics__nav">
             <ul  className="header-topics__links">
-              <li>
-                <a href="#">América Latina</a>
-              </li>
-              <li>
-                <a href="#">Guerra EUA e Israel x Irã</a>
-              </li>
-              <li>
-                <a href="#">Isreal x Palestina</a>
-              </li>
-              <li>
-                <a href="#">Mundo Entrevistas</a>
-              </li>
-              <li>
-                <a href="#">Política e Economia</a>
-              </li>
-              <li>
-                <a href="#">Guerra na Ucrânia</a>
-              </li>
+              {categories.map(category => (
+                <li>
+                  <Link to={category.link}>{category.text}</Link>
+                </li>
+              ))}
             </ul>
           </nav>
 

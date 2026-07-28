@@ -407,6 +407,7 @@ latest-post__subtitle {
 .sidebar__sidebar-videos {
     padding: 1.8rem 1.8rem;
     background-color: var(--clr-bg-accent);
+    background-color: var(--clr-gray-10);
 }
 
 .sidebar-videos__header-title {
