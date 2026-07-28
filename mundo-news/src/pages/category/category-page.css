@@ -1,0 +1,52 @@
+.top-ad,
+.bottom-ad {
+    width: min(90vw, 970px);
+    margin: 2rem auto;
+}
+
+.page-title {
+    font-size: var(--fs-extra-large);
+}
+
+.articles-wrapper {
+    --gap: 2rem;
+
+    margin-top: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    /* Bigger row gap to look better with the row-rule */
+    gap: calc(3 * var(--gap)) var(--gap);
+    row-rule: 2px solid var(--clr-bg-secondary);
+
+    /* column-rule: 1px dashed var(--clr-bg-secondary); */
+}
+
+/* Default: Have 4 articles by line */
+.article {
+    width: calc(25% - var(--gap));
+}
+
+/* Have 3 articles by line */
+@media (max-width: 1100px) {
+    .article {
+        width: calc(33% - var(--gap));
+    }
+}
+
+/* Have 2 articles by line */
+@media (max-width: 840px) {
+    .article {
+        width: calc(50% - var(--gap));
+    }
+}
+
+/* Have 1 article by line */
+@media (max-width: 550px) {
+    .article {
+        width: calc(100%);
+        max-width: 380px;
+    }
+}

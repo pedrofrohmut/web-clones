@@ -3,15 +3,9 @@ import { Link } from "react-router"
 
 import MainLogo from "/src/shared/MainLogo"
 
-import "/src/layout/layout-header.css"
+import { categories } from "/src/data/categories"
 
-const categories = [
-  { link: "category/america-latina", text: "América Latina" },
-  { link: "category/guerra-eua-israeal-e-ira", text: "Guerra EUA e Israel x Irã" },
-  { link: "category/israel-e-palestina", text: "Isreal x Palestina" },
-  { link: "category/mundo-entrevistas", text: "Mundo Entrevistas" },
-  { link: "category/politica-e-economia", text: "Política e Economia" },
-]
+import "/src/layout/layout-header.css"
 
 /*
   TODO: make the topics list dynamic. Make it have as many elements that can fit
@@ -78,9 +72,9 @@ const Header = () => {
 
           <nav className="header-topics__nav">
             <ul  className="header-topics__links">
-              {categories.map(category => (
-                <li>
-                  <Link to={category.link}>{category.text}</Link>
+              {categories.map((category, i) => (
+                <li key={i}>
+                  <Link to={category.link}>{category.title}</Link>
                 </li>
               ))}
             </ul>

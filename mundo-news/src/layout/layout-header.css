@@ -70,6 +70,7 @@
     color: var(--clr-gray-55);
 }
 
+/* TODO: Change the header-main when width < 1020px */
 .header-main {
     /* Using position relative/absolute instead of display flex so the title
        will always be in the center */
@@ -189,4 +190,11 @@
     display: inline-block;
     width: 200px;
     padding: 0.5rem;
+}
+
+/* TODO: Temp styles for testing pages */
+@media (max-width: 730px) {
+    .layout-header {
+        display: none;
+    }
 }

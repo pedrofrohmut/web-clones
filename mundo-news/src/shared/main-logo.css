@@ -1,6 +1,7 @@
 .main-logo {
     text-transform: uppercase;
     font-size: 3.8rem;
+    font-weight: var(--fw-bold);
     margin: 0;
 }
 

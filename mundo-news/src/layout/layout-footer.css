@@ -106,3 +106,10 @@
     font-size: var(--fs-medium);
     font-weight: var(--fw-bold);
 }
+
+/* TODO: Temp styles for testing pages */
+@media (max-width: 730px) {
+    .layout-footer {
+        display: none;
+    }
+}
