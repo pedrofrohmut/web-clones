@@ -1,9 +1,3 @@
-.top-ad,
-.bottom-ad {
-    width: min(90vw, 970px);
-    margin: 2rem auto;
-}
-
 .page-title {
     font-size: var(--fs-extra-large);
 }

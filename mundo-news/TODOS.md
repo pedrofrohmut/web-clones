@@ -5,6 +5,10 @@
 - [ ] Try to get a weather app for the header.
 - [ ] Make the website responsive. Make it work with smaller screens like tablets
 and phones.
+    - [ ] Layout Header
+    - [ ] Layout Footer
+    - [ ] Home page
+    - [X] Category page responsive
 - [ ] Make the page apoio
 - [ ] Make the page article (where you can read the article content)
 - [ ] Make the pages (about, contact, newsletter, privacy politics)

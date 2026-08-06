@@ -1,0 +1,104 @@
+.page-main {
+    margin: 0 auto;
+    width: fit-content;
+
+    display: grid;
+    grid-template-columns: min(75ch, 90vw) 300px;
+    gap: 2rem;
+}
+
+.article__header {
+    margin-bottom: 2.5rem;
+}
+
+.article__header .article-topic {
+    color: var(--clr-blue-70);
+    font-size: var(--fs-regular);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.article__header .article-title {
+    font-size: var(--fs-extra-large);
+    margin-bottom: 0.75rem;
+}
+
+.article__header .article-subtitle {
+    color: var(--clr-fg-secondary);
+    font-size: var(--fs-medium);
+}
+
+.article__author-info {
+    font-size: var(--fs-small);
+    margin-bottom: 2.5rem;
+
+    display: grid;
+    gap: 0.25rem;
+}
+
+.article__author-info .author-name {
+    font-weight: var(--fw-bold);
+}
+
+/* Mundo channels */
+
+.mundo-channels {
+    background-color: var(--clr-bg-secondary);
+    padding: 1.2rem;
+}
+
+.channels__title {
+    font-size: 1.6rem;
+    color: var(--clr-blue-80);
+    margin-bottom: 1.2rem;
+}
+
+.channels__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+}
+
+.channels__card {
+    background-color: var(--clr-bg-accent);
+    padding: 1rem;
+    font-size: var(--fs-small);
+    border-radius: var(--border-radius-4);
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
+}
+
+.channels__card p {
+    margin: 0;
+}
+
+.channels__card p:first-child {
+    font-weight: var(--fw-bold);
+    font-size: var(--fw-medium);
+}
+
+.channels__card p:first-child i {
+    margin-right: 0.6rem;
+}
+
+.channels__card button {
+    padding: 0.4rem 0.9rem;
+    border: 0;
+    border-radius: var(--border-radius-3);
+    color: #fff;
+    font-weight: var(--fw-bold);
+}
+
+.channels__newsletter button {
+    background-color: var(--clr-newsletter-yellow);
+}
+
+.channels__whatsapp button {
+    background-color: var(--clr-whatsapp-green);
+}
+
+.channels__youtube button {
+    background-color: var(--clr-youtube-red);
+}
