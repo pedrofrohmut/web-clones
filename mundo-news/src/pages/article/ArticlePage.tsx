@@ -1,5 +1,7 @@
 import { Link } from "react-router"
 
+import InlineSlider from "/src/shared/InlineSlider"
+
 import "/src/pages/article/article-page.css"
 
 const article = {
@@ -8,6 +10,34 @@ const article = {
   title: "MUS erat ‘porta-molunt maneant’ ad Nemo quam adulationis quos m hounnbre arcades, est stanie",
   subtitle: "Commodo EU Risus, NAM provocatus minus ab methodo e wisi modo sanguinis orbitam regalia, 'lorem vehicula atque dicit insldiis' v publiciter tenetur nam 'lapidor quis antemurale se occidentem ea Magna'",
 }
+
+const mostReadArticles = [
+  {
+    img: "",
+    title: "Lobortis feugiat vivamus at augue eget arcu dictum varius duis at consectetur!",
+    date: "1 abril 1969",
+  },
+  {
+    img: "",
+    title: "Dolor morbi non arcu risus, quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam?",
+    date: "3 abril 1969",
+  },
+  {
+    img: "",
+    title: "Lacinia quis vel eros donec ac odio tempor orci dapibus ultrices in iaculis nunc sed augue.",
+    date: "2 abril 1969",
+  },
+  {
+    img: "",
+    title: "Lobortis feugiat vivamus at. Sit amet, mattis vulputate enim nulla aliquet!",
+    date: "5 abril 1969",
+  },
+  {
+    img: "",
+    title: "Quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet, consectetur adipiscing elit duis tristique sollicitudin?",
+    date: "4 abril 1969",
+  },
+]
 
 const ArticlePage = () => {
   return (
@@ -34,6 +64,7 @@ const ArticlePage = () => {
           </section>
 
           <div className="article__body">
+
             <p>
               D stupore me carceribus mazim-meruerunt MUS est formas dependentias
               eum dolor-sociis cras conditiones d mirum ea eius octavas, eius ad
@@ -85,7 +116,38 @@ const ArticlePage = () => {
 
             </section>
 
-          </div>
+            <p>
+             Quod d aemulos ad Quas ad colubros, s decursu ex Parum Rhoncus
+             fructum sem conubia “scelera recordationem” ea brevibus.
+            </p>
+
+            <p>
+              Ea subsecutum laesionem magni culpa-liber (77/68), p numerus opponunt
+              solenni per “vitae p reprobo legitima e violentia orci corrupti, y
+              cum sit eos proposuit v s lectus ea consequat urna ad cuncta charisma
+              praesens”.
+            </p>
+
+            <InlineSlider title="Mais Lidas" articles={mostReadArticles} />
+
+            <p>
+              P nibh convincere eos, “quas enim per bibendum est s tot ab occidas,
+              7 eu tempus, e Gaudere quam advcrsis d nobis seacula conservatione
+              quae suspncta ad celeriorem y p reuiescat ac vero merentur”.
+            </p>
+
+            <p>
+              V placerat-victoria protulit, Gratiam Inscio, tui v totam laborans
+              cum quia oppressor d progredi quae m atque ac Louor.
+            </p>
+
+            <p>
+              Ad cadentes e consumere per gratiarum ac Oppresso rem a Noverca,
+              est indolem sem se veritatis instrumentu ad adverso ea Donec
+              Avocare “quasi crudelissime m procinctu mattis”.
+            </p>
+
+          </div> {/* article__body */}
 
         </article>
 

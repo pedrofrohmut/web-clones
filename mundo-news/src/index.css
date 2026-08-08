@@ -67,8 +67,10 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --clr-blue-10: #000c33;
     --clr-blue-05  #00061a;
 
-    --clr-newsletter-yellow: #b38f00;
-    --clr-whatsapp-green: #075E54;
+    /* --clr-newsletter-yellow: #b38f00; */
+    --clr-newsletter-yellow: #999900;
+    /* --clr-whatsapp-green: #075E54; */
+    --clr-whatsapp-green: #009900;
     --clr-youtube-red: #990000;
 
     --container-width: min(1400px, 90vw);

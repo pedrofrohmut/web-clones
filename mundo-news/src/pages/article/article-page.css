@@ -40,11 +40,23 @@
     font-weight: var(--fw-bold);
 }
 
+.article__body > p {
+    font-size: var(--fs-medium);
+    text-align: justify;
+    text-indent: 2rem;
+    margin: 0;
+}
+
+.article__body > p:not(.article__body > p:last-child) {
+    margin-bottom: 2rem;
+}
+
 /* Mundo channels */
 
 .mundo-channels {
     background-color: var(--clr-bg-secondary);
     padding: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 .channels__title {
@@ -87,18 +99,27 @@
     padding: 0.4rem 0.9rem;
     border: 0;
     border-radius: var(--border-radius-3);
-    color: #fff;
+    font-size: var(--fs-small);
     font-weight: var(--fw-bold);
+    color: var(--clr-gray-10);
 }
 
 .channels__newsletter button {
     background-color: var(--clr-newsletter-yellow);
+    background-color: #cccc66;
 }
 
 .channels__whatsapp button {
     background-color: var(--clr-whatsapp-green);
+    background-color: #66cc00;
 }
 
 .channels__youtube button {
     background-color: var(--clr-youtube-red);
+    background-color: #cc6666;
+}
+
+
+.article__body .inline-slider {
+    margin-bottom: 1.2rem;
 }

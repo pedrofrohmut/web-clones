@@ -1,11 +1,16 @@
+import { Link } from "react-router"
+
+// Components
 import OpinionsSlider from "/src/pages/home/OpinionsSlider"
 import HeaderAd from "/src/pages/home/HeaderAd"
 import MiddleAd from "/src/pages/home/MiddleAd"
 import SelectionSection from "/src/pages/home/SelectionSection"
 import MainLogo from "/src/pages/home/MainLogo"
 
+// Css
 import "/src/pages/home/home-page.css"
 
+// Data
 import opinions from "/src/pages/home/opinions"
 
 type Article = {
@@ -19,10 +24,12 @@ type Article = {
 
 const featuredWide: Article = {
   topic: "Estados Unidos",
+  topicSlug: "estados-unidos",
   // title: "Mamdani chama Netanyahu de ‘criminoso de guerra’ e cobra que governo Trump cumpra mandado do TPI",
   // author: "Redação",
   // subtitle: "Prefeito afirmou que cidade não tem autoridade legal para prender premiê, que foi acusado em novembro de 2024 por crimes de guerra e contra a humanidade em Gaza",
   // topic: "Proprio Regiae",
+  titleSlug: "methodo-saepe-manebimus-ea-rcpublica-me-mppono-y-purus-quo-arcades-earum-gradum-quaeque-me-nam",
   title: "Methodo saepe Manebimus ea ‘rcpublica me mppono’ y purus quo arcades Earum gradum quaeque me NAM",
   author: "Securus",
   subtitle: "Intendis fortuna nec natura hac aut republicae optio usus aocessu landem, sem sit quaedam ex denegare ad 2024 sem quidem ea vacare a eventu s septembrem ex Nunc",
@@ -471,7 +478,9 @@ const HomePage = () => {
             {/* Featured Article Wide */}
             <div className="featured-article-wide">
               <div className="featured-article-wide__topic home-article-topic">{featuredWide.topic}</div>
-              <div className="featured-article-wide__title home-article-title">{featuredWide.title}</div>
+              <Link to={`article/${featuredWide.topicSlug}/${featuredWide.titleSlug}`}>
+                <div className="featured-article-wide__title home-article-title">{featuredWide.title}</div>
+              </Link>
               <div className="featured-article-wide__author home-article-author">{featuredWide.author}</div>
               <div className="featured-article-wide__subtitle home-article-subtitle">{featuredWide.subtitle}</div>
             </div>
