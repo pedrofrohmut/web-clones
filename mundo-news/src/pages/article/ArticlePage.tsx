@@ -1,6 +1,8 @@
 import { Link } from "react-router"
 
 import InlineSlider from "/src/shared/InlineSlider"
+import SidebarNewsletterForm from "/src/shared/SidebarNewsletterForm"
+import SidebarVideos from "/src/shared/SidebarVideos"
 
 import "/src/pages/article/article-page.css"
 
@@ -210,7 +212,18 @@ const ArticlePage = () => {
 
         </article>
 
-        <aside>sidebar</aside>
+        <aside>
+
+          <SidebarNewsletterForm />
+
+          {/* Sidebar Ads */}
+          <div className="article-page__sidebar-ad ad">Sidebar Ad</div>
+          <div className="article-page__sidebar-long-ad ad">Sidebar Long Ad</div>
+          <div className="article-page__sidebar-ad ad">Sidebar Ad</div>
+
+          <SidebarVideos />
+
+        </aside>
 
       </main>
 

@@ -1,0 +1,64 @@
+/* Sidebar - Videos */
+
+.sidebar-videos {
+    padding: 1.8rem;
+    background-color: var(--clr-gray-10);
+}
+
+.sidebar-videos__header-title {
+    font-size: var(--fs-extra-large);
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-videos__header-subtitle {
+    font-size: var(--fs-regular);
+    margin-bottom: 3rem;
+}
+
+.sidebar-videos__videos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    margin-bottom: 3rem;
+}
+
+.sidebar-video__img {
+    aspect-ratio: 16 / 9;
+    background-color: var(--clr-bg-secondary);
+    padding: 0.85rem;
+    font-size: var(--fs-medium);
+    margin-bottom: 0.4rem;
+}
+
+.sidebar-video__date {
+    color: var(--clr-gray-60);
+    font-size: var(--fs-extra-small);
+    font-style: italic;
+    margin-bottom: 0.4rem;
+}
+
+.sidebar-video__title {
+    font-size: var(--fs-medium);
+    margin-bottom: 0.4rem;
+}
+
+.sidebar-video__author {
+    font-size: var(--fs-extra-small);
+    color: var(--clr-gray-60);
+    font-style: italic;
+}
+
+.sidebar-videos__more-btn {
+    background-color: var(--clr-gray-25);
+    color: var(--clr-gray-85);
+    border: 0;
+    border-radius: var(--border-radius-4);
+    padding: 0.75rem 1.8rem;
+    font-size: var(--fs-regular);
+
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}

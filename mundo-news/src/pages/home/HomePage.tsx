@@ -6,6 +6,8 @@ import HeaderAd from "/src/pages/home/HeaderAd"
 import MiddleAd from "/src/pages/home/MiddleAd"
 import SelectionSection from "/src/pages/home/SelectionSection"
 import MainLogo from "/src/pages/home/MainLogo"
+import SidebarNewsletterForm from "/src/shared/SidebarNewsletterForm"
+import SidebarVideos from "/src/shared/SidebarVideos"
 
 // Css
 import "/src/pages/home/home-page.css"
@@ -130,36 +132,6 @@ const mostRead: Array<Article> = [
     // date: "27 ab minim",
   }
 
-]
-
-const sidebarVideos = [
-  {
-    date: "20/07/2026",
-    // title: "Irã declara fim do acordo de paz com os EUA: o que muda agora?",
-    // author: "Rodamundo",
-
-    // date: "60/27/7026",
-    title: "Sem ordines sit eu gradum ac rem non ad SEM: v rem modo error?",
-    author: "Successum",
-  },
-  {
-    date: "19/07/2026",
-    // title: "A geopolítica da FIFA para comandar o futebol mundial",
-    // author: "Análise de Breno e Tom Altman",
-
-    // date: "79/07/1026",
-    title: "O auctoritate ea QUAS eros regnorum w christi antiguo",
-    author: "Ripensi eu Neque w Hac Multas",
-  },
-  {
-    date: "18/07/2026",
-    // title: "A grande final: Argentina vs Espanha na Copa do Mundo 2026",
-    // author: "Esquerda Esportiva",
-
-    // date: "18/87/2026",
-    title: "M acerba nihil: Evidenter ex Aocessu ea Urna ac Saepe 6026",
-    author: "Modernum Assumpsit",
-  }
 ]
 
 const articles1 = [
@@ -621,15 +593,7 @@ const HomePage = () => {
 
         <div className="home-content__right home-sidebar">
 
-          {/* Newsletter Form */}
-          <div className="newsletter">
-            <div className="newsletter__title">Newsletter</div>
-            <form className="newsletter__form">
-              <label htmlFor="email" className="newsletter__label">E-mail</label>
-              <input type="email" id="email" className="newsletter__input required-input" />
-              <button className="newsletter__submit">Inscreva-se!</button>
-            </form>
-          </div>
+          <SidebarNewsletterForm />
 
           {/* Featured Sidebar Video */}
           <div className="sidebar__featured-video placeholder-img">Sidebar video</div>
@@ -667,26 +631,7 @@ const HomePage = () => {
             ))}
           </div>
 
-          {/* Sidebar Videos */}
-          <div className="sidebar__sidebar-videos">
-            <div className="sidebar-videos__header-title">Vídeos</div>
-            <div className="sidebar-videos__header-subtitle">Mais vídeos para você curtir</div>
-
-            <div className="sidebar-videos">
-              {sidebarVideos.map(video => (
-                <div className="sidebar-video" key={video.title}>
-                  <div className="sidebar-video__img home-article-img placeholder-img">Video img</div>
-                  <div className="sidebar-video__date home-article-date">{video.date}</div>
-                  <div className="sidebar-video__title home-article-title">{video.title}</div>
-                  <div className="sidebar-video__author home-article-author">{video.author}</div>
-                </div>
-              ))}
-            </div>
-
-            <button className="sidebar-videos__more-btn">
-              Ver todos <i className="fa-solid fa-chevron-right"></i>
-            </button>
-          </div>
+          <SidebarVideos />
 
         </div>
 

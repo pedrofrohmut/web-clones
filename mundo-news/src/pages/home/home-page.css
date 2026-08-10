@@ -266,50 +266,6 @@
     gap: 1.2rem;
 }
 
-/* Newsletter Form */
-
-.newsletter {
-    border: 2px solid var(--clr-gray-35);
-    border-radius: var(--border-radius-6);
-    background-color: var(--clr-gray-20);
-    padding: 1.2rem 1.8rem;
-}
-
-.newsletter__title {
-    font-size: var(--fs-medium);
-    font-weight: var(--fw-bold);
-    margin-bottom: 1.2rem;
-}
-
-.newsletter__label {
-    display: block;
-    font-size: var(--fs-small);
-    margin-bottom: 0.6rem;
-}
-
-.newsletter__input {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    background-color: var(--clr-gray-35);
-    color: var(--clr-fg);
-    border: 0;
-    border-radius: var(--border-radius-4);
-    padding: 0.4rem 0.9rem;
-    font-size: var(--fs-small);
-    margin-bottom: 1.2rem;
-}
-
-.newsletter__submit {
-    border: 0;
-    border-radius: var(--border-radius-4);
-    padding: 0.4rem 0.9rem;
-    width: 100%;
-    background-color: var(--clr-blue-65);
-    color: var(--clr-blue-90);
-    font-size: var(--fs-regular);
-}
-
 .sidebar__featured-video {
     aspect-ratio: 190 / 100;
 }
@@ -400,63 +356,4 @@ latest-post__subtitle {
     line-height: 0.9;
     position: relative;
     top: 2px;
-}
-
-/* Sidebar - Videos */
-
-.sidebar__sidebar-videos {
-    padding: 1.8rem 1.8rem;
-    background-color: var(--clr-bg-accent);
-    background-color: var(--clr-gray-10);
-}
-
-.sidebar-videos__header-title {
-    font-size: var(--fs-extra-large);
-    margin-bottom: 0.5rem;
-}
-
-.sidebar-videos__header-subtitle {
-    font-size: var(--fs-regular);
-    margin-bottom: 1.5rem;
-}
-
-.sidebar-videos {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-
-    margin-bottom: 2rem;
-}
-
-.sidebar-video__img {
-    aspect-ratio: 16 / 9;
-}
-
-.sidebar-video__date {
-    color: var(--clr-gray-75);
-    font-weight: var(--fw-regular);
-    font-size: var(--fs-small);
-}
-
-.sidebar-video__title {
-    font-size: var(--fs-medium);
-}
-
-.sidebar-video__author {
-    font-size: var(--fs-small);
-    color: var(--clr-gray-75);
-}
-
-.sidebar-videos__more-btn {
-    background-color: var(--clr-gray-25);
-    color: var(--clr-gray-85);
-    border: 0;
-    border-radius: var(--border-radius-4);
-    padding: 1rem 2.8rem;
-    font-size: var(--fs-regular);
-
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 }

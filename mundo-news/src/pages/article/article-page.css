@@ -123,3 +123,14 @@
 .article__body .inline-slider {
     margin-bottom: 1.2rem;
 }
+
+/* Sidebar */
+
+.article-page__sidebar-ad {
+    aspect-ratio: 11 / 10;
+    margin: 2rem 0;
+}
+
+.article-page__sidebar-long-ad {
+    aspect-ratio: 1 / 2;
+}

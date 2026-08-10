@@ -189,13 +189,13 @@ const CategoryPage = () => {
 
       <div className="articles-wrapper">
         {articles.map((article: Article, i: number) => (
-          <div className="article">
+          <div className="article" key={i}>
             <div className="article-img placeholder-img">Article Img</div>
             <div className="article-topic">{article.topic}</div>
             <div className="article-title-small">{article.title}</div>
             <div className="article-sameline-container">
               <div className="article-author">{article.author}</div>
-              <div className="article-date">{article.date}</div>
+             <div className="article-date">{article.date}</div>
             </div>
           </div>
         ))}

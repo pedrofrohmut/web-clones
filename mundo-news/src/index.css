@@ -189,6 +189,12 @@ a {
 
 /* ADs */
 
+.ad {
+    background-color: var(--clr-bg-secondary);
+    padding: 1.2rem;
+    font-size: var(--fs-medium);
+}
+
 .top-ad,
 .bottom-ad {
     width: min(90vw, 970px);
