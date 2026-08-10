@@ -9,6 +9,7 @@ and phones.
     - [ ] Layout Footer
     - [ ] Home page
     - [X] Category page responsive
+    - [ ] Article page responsive
 - [ ] Make the page apoio
-- [ ] Make the page article (where you can read the article content)
+- [X] Make the page article (where you can read the article content)
 - [ ] Make the pages (about, contact, newsletter, privacy politics)

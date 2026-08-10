@@ -1,0 +1,65 @@
+.support-page__hero-wrapper {
+    background-color: var(--clr-gray-80);
+}
+
+.support-page__hero {
+    width: min(90vw, 750px);
+    margin: 3rem auto;
+    padding: 1.8rem 0;
+
+    color: var(--clr-gray-15);
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 2rem;
+}
+
+.support-page__hero-logo {
+    width: 250px;
+    margin: 0.8rem 0 0 0.8rem;
+    transform: rotate(-8deg);
+}
+
+/* No much use of variables here. Because it is a very unique element. */
+.support-page__hero-logo div:first-child {
+    line-height: 0.75;
+    color: var(--clr-blue);
+    font-size: 4.5rem;
+    font-weight: 900;
+    font-family: var(--ff-roboto);
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    text-align: center;
+}
+
+.support-page__hero-logo div:last-child {
+    font-family: var(--ff-parisienne);
+    color: var(--clr-gray-10);
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 0.9;
+    text-align: center;
+    position: relative;
+    top: -0.5rem;
+}
+
+.support-page__hero-right {
+    align-self: center;
+
+    display: grid;
+    gap: 0.8rem;
+}
+
+.support-page__hero-accent {
+    background-color: var(--clr-yellow-65);
+    color: var(--clr-gray-20);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-regular);
+    padding: 0.6rem;
+    width: fit-content;
+}
+
+.support-page__hero-text {
+    color: var(--clr-gray-10);
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-regular);
+}

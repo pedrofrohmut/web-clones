@@ -63,7 +63,7 @@ const Header = () => {
           <MainLogo className="header-main__logo" size={68} />
         </Link>
 
-        <button className="header-main__apoie">Apoie</button>
+        <Link to="/support" className="header-main__apoie">Apoie</Link>
       </div>
 
       <div className="header-topics">

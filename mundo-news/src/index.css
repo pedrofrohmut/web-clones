@@ -67,6 +67,26 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --clr-blue-10: #000c33;
     --clr-blue-05  #00061a;
 
+    --clr-yellow-95: #f9f5ec;
+    --clr-yellow-90: #f3ead8;
+    --clr-yellow-85: #ece0c5;
+    --clr-yellow-80: #e6d6b2;
+    --clr-yellow-75: #e0cb9f;
+    --clr-yellow-70: #dac18b;
+    --clr-yellow-65: #d4b87a;
+    --clr-yellow-60: #cdac65;
+    --clr-yellow-55: #c7a252;
+    --clr-yellow-50: #c1973e;
+    --clr-yellow-45: #ad8838;
+    --clr-yellow-40: #9a7932;
+    --clr-yellow-35: #876a2c;
+    --clr-yellow-30: #745b25;
+    --clr-yellow-25: #604c1f;
+    --clr-yellow-20: #4d3d19;
+    --clr-yellow-15: #3a2d13;
+    --clr-yellow-10: #271e0c;
+    --clr-yellow-5: #130f06;
+
     /* --clr-newsletter-yellow: #b38f00; */
     --clr-newsletter-yellow: #999900;
     /* --clr-whatsapp-green: #075E54; */
@@ -78,6 +98,7 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --fw-lighter: 100;
     --fw-light: 200;
     --fw-regular: 300;
+    --fw-medium: 400;
     --fw-semibold: 600;
     --fw-bold: 700;
     --fw-bolder: 900;
@@ -100,6 +121,10 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --border-radius-4: 0.4rem;
     --border-radius-3: 0.3rem;
     --border-radius-2: 0.2rem;
+
+    --ff-noto-serif: "Noto Serif", serif;
+    --ff-roboto: "Roboto", sans-serif;
+    --ff-parisienne: "Parisienne", cursive;
 }
 
 *, *::after, *::before {
@@ -126,7 +151,7 @@ body {
     color: var(--clr-fg);
     font-weight: var(--fw-regular);
     font-size: 1rem;
-    font-family: "Noto Serif", serif;
+    font-family: var(--ff-noto-serif);
 
     font-synthesis: none;
     text-rendering: optimizeLegibility; /* TODO: This may impact performance. Remove TODO later if it okay */
@@ -136,7 +161,7 @@ body {
 
 button,
 input {
-    font-family: "Noto Serif", serif;
+    font-family: var(--ff-roboto);
 }
 
 a {

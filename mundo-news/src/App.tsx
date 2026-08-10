@@ -6,6 +6,7 @@ import LayoutFooter from "/src/layout/LayoutFooter"
 import HomePage from "/src/pages/home/HomePage"
 import CategoryPage from "/src/pages/category/CategoryPage"
 import ArticlePage from "/src/pages/article/ArticlePage"
+import SupportPage from "/src/pages/support/SupportPage"
 import NotFoundPage from "/src/pages/not-found/NotFoundPage"
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route index element={<HomePage />} />
           <Route path="/category/:name" element={<CategoryPage />} />
           <Route path="/article/:topic-slug/:title-slug" element={<ArticlePage />} />
+          <Route path="/support" element={<SupportPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
