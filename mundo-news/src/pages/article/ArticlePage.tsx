@@ -39,6 +39,33 @@ const mostReadArticles = [
   },
 ]
 
+const readAlsoArticles = [
+  {
+    title: "Lorem omnis culpa maiores quia hic Cumque ad saepe cumque saepe eligendi! Lorem nulla itaque?",
+    date: "9 de agosto",
+  },
+  {
+    title: "Consectetur odit consectetur eaque magni enim! Voluptas vel.",
+    date: "5 de agosto",
+  },
+  {
+    title: "Sit cupiditate dolore temporibus ut eaque minima ab ipsum Inventore consectetur.",
+    date: "4 de agosto",
+  },
+  {
+    title: "Amet nisi perferendis sunt praesentium non Itaque nihil unde.",
+    date: "3 de agosto",
+  },
+  {
+    title: "Ipsum molestiae maiores unde earum dolores itaque consectetur. Sint ea quidem?",
+    date: "3 de agosto",
+  },
+  {
+    title: "Lorem amet eum commodi eum eos quidem Excepturi harum dolores nemo illo Commodi fugit.",
+    date: "2 de agosto",
+  },
+]
+
 const ArticlePage = () => {
   return (
     <div className="container">
@@ -141,11 +168,43 @@ const ArticlePage = () => {
               cum quia oppressor d progredi quae m atque ac Louor.
             </p>
 
+            <section className="inline-ad placeholder-img">Inline Ad</section>
+
             <p>
               Ad cadentes e consumere per gratiarum ac Oppresso rem a Noverca,
               est indolem sem se veritatis instrumentu ad adverso ea Donec
               Avocare “quasi crudelissime m procinctu mattis”.
             </p>
+
+            <p>
+              Se successu effectum nec surdis criminales sit loquor ab aemulam ea
+              scientiam, viribus Dominant Regnandi, depopulatores titulum eu Spiral
+              ac Circumspecte ac Ordine. Hic iuratoria hac, numquam s perennitatem,
+              ab moriar praesentes etninentis gradum urna verius quo eros ottomanicum
+              a defensionis distulerunt ad quarta ex Assueverunt.
+            </p>
+
+            <section className="inline-ad placeholder-img">Inline Ad</section>
+
+            <p>
+              “Cras praesidia, vitae, ridiculus nec supremi, morbi caedis m adverso
+              fortuna erudite. Amet nam nec, w asylum ea Modi symbola ad ipsum victum
+              w grutiilntiones. Ad fames modo animi eum per domini invehere perltum
+              nam ea oppressor dimittere”, dolor dui.
+            </p>
+
+            <p>
+              “Oppressus dependentias e tributa, fremebat perare mus voluptates
+              ad diebus, semine se neglexi y testimonia eum duorum se axioma
+              gradum clectione proficisceretur ex valorem v desiderium, opponat
+              alacritate captivatio iure sueticum malesuada, disponit ac posterum
+              s accusare rem assumenda refugium magnae nec amplissima eu queunt s
+              nemo murmurabant, eum esse augue me intendebant proditorem ab
+              occasione armorum apostrophe s accesserunt submissionem ex 958
+              inscio”, perltum s claritatem ad necessaria.
+            </p>
+
+            <InlineSlider title="Leia Também" articles={readAlsoArticles} />
 
           </div> {/* article__body */}
 
