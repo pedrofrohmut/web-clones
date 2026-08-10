@@ -1,3 +1,5 @@
+/* Hero */
+
 .support-page__hero-wrapper {
     background-color: var(--clr-gray-80);
 }
@@ -62,4 +64,110 @@
     color: var(--clr-gray-10);
     font-weight: var(--fw-medium);
     font-size: var(--fs-regular);
+}
+
+/* Pricing Section */
+
+.support-page__pricing {
+}
+
+.support-page__pricing-title {
+    text-align: center;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-large);
+    margin-bottom: 0.8rem;
+}
+
+.support-page__pricing-subtitle {
+    text-align: center;
+    font-size: var(--fs-medium);
+    margin-bottom: 3rem;
+}
+
+.support-page__pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 5rem;
+}
+
+.support-page__pricing-card,
+.support-page__pricing-card-highlighted {
+    border: 3px solid var(--clr-bg-secondary);
+    border-radius: 1.3rem;
+    background-color: var(--clr-bg-secondary);
+    width: 280px;
+    text-align: center;
+    padding: 2rem 1.2rem;
+
+    display: grid;
+    gap: 1.2rem;
+}
+
+.support-page__pricing-card-highlighted {
+    --hl-color: var(--clr-blue-60);
+    border-color: var(--hl-color);
+    position: relative;
+}
+
+.support-page__pricing-card-highlighted:before {
+    content: "Mais escolhido";
+    background-color: var(--hl-color);
+    padding: 0.6rem 0;
+    border-radius: 0.6rem;
+    position: absolute;
+    top: -1.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    font-weight: var(--fw-bold);
+}
+
+.support-page__pricing-card-title {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: var(--fw-bold);
+}
+
+.support-page__pricing-card-subtitle {
+    font-size: var(--fs-medium);
+    color: var(--clr-fg-secondary);
+}
+
+.support-page__pricing-card-price {
+    font-size: var(--fs-large);
+}
+
+.support-page__pricing-card-price span {
+    font-size: 3.5rem;
+    font-weight: var(--fw-bold);
+}
+
+.support-page__pricing-card-button {
+    background-color: var(--clr-bg-dark);
+    border-radius: var(--border-radius-5);
+    padding: 0.8rem 1.6rem;
+    color: var(--clr-fg);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-small);
+}
+
+.support-page__pricing-card-highlighted .support-page__pricing-card-button {
+    background-color: var(--hl-color);
+}
+
+.support-page__pricing-other-values {
+    background-color: var(--clr-blue-60);
+    border: 0;
+    border-radius: var(--border-radius-4);
+    color: var(--clr-fg);
+    padding: 0.8rem 1.6rem;
+    font-size: var(--fs-medium);
+    text-transform: uppercase;
+    margin: 3rem auto 0;
+    display: block;
+}
+
+.support-page__pricing-other-values i {
+    margin-left: 1rem;
 }
