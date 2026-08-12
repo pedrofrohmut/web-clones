@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Link } from "react-router"
 
 import MainLogo from "/src/shared/MainLogo"
@@ -7,16 +7,45 @@ import { categories } from "/src/data/categories"
 
 import "/src/layout/layout-header.css"
 
-/*
-  TODO: make the topics list dynamic. Make it have as many elements that can fit
-  in the screen and the ones that don't go in the more topics list.
- */
 const Header = () => {
   const [isOpenMore, setIsOpenMore] = useState<boolean>(false)
 
   const handleToggleMore = () => {
     setIsOpenMore(prev => !prev)
   }
+
+  const topicsNavRef = useRef<HTMLNavElement>(null)
+  const categoriesRef = useRef([])
+
+  // Variable to decide how many to show in the component directly and how many
+  // will show only when the menu is clicked
+  const [visibleCount, setVisibleCount] = useState(categories.length)
+
+  useEffect(() => {
+    const availableWidth = topicsNavRef.current?.offsetWidth
+    const gapStr = window.getComputedStyle(topicsNavRef.current?.parentElement).gap
+    const gap = parseInt(gapStr.replace("px", ""))
+
+    let acc = 0
+    let count = 0
+    let visibleWidth = 0
+    for (const li of categoriesRef.current) {
+      const liWidth = li.offsetWidth
+      acc += liWidth + gap
+
+      if (acc > availableWidth) {
+        visibleWidth = acc - liWidth - (2 * gap)
+        break
+      }
+
+      count++
+    }
+
+    setVisibleCount(count)
+
+    // Setup the width of the nav to the new content size
+    topicsNavRef.current.style.width = `${visibleWidth}px`
+  }, [categories])
 
   return (
     <header className="layout-header container">
@@ -68,55 +97,36 @@ const Header = () => {
 
       <div className="header-topics">
 
-        <div className="header-topics__visible-links">
+        <nav className="header-topics__nav" ref={topicsNavRef}>
+          <ul  className="header-topics__links">
+            {categories.slice(0, visibleCount).map((category, i) => (
+              <li key={i} ref={e => { categoriesRef.current[i] = e }}>
+                <Link to={category.link}>{category.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-          <nav className="header-topics__nav">
-            <ul  className="header-topics__links">
-              {categories.map((category, i) => (
-                <li key={i}>
-                  <Link to={category.link}>{category.title}</Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
+        <div>
+          <button className="header-topics__button-more" onClick={handleToggleMore}>
+            Mais Tópicos <i className="fa-solid fa-chevron-down"></i>
+          </button>
 
-          <div className="header-topics-more-container">
-            <button className="header-topics__button-more" onClick={handleToggleMore}>
-              Mais Tópicos <i className="fa-solid fa-chevron-down"></i>
-            </button>
-
-            {isOpenMore && (
-              <nav className="header-topics__nav-more">
-                <ul className="header-topics__links-more">
-                  <li>
-                    <a href="#">Estados Unidos</a>
+          {isOpenMore && (
+            <nav className="header-topics__nav-more">
+              <ul className="header-topics__links-more">
+                {categories.slice(visibleCount, categories.length).map((category, i) => (
+                  <li key={i} ref={e => { categoriesRef.current[i] = e }}>
+                    <Link to={category.link}>{category.title}</Link>
                   </li>
-                  <li>
-                    <a href="#">Ásia</a>
-                  </li>
-                  <li>
-                    <a href="#">Europa</a>
-                  </li>
-                  <li>
-                    <a href="#">Oriente Médio</a>
-                  </li>
-                  <li>
-                    <a href="#">Esportes</a>
-                  </li>
-                  <li>
-                    <a href="#">Tecnologia</a>
-                  </li>
-                  <li>
-                    <a href="#">Ciência</a>
-                  </li>
-                </ul>
-              </nav>
-            )}
-          </div> {/* header-topics-more-container */}
-
-        </div> {/* header-topics__visible-links */}
+                ))}
+              </ul>
+            </nav>
+          )}
+        </div>
 
       </div> {/* header-topics */}
+
     </header>
   )
 }

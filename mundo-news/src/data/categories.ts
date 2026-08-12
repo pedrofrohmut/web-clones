@@ -34,5 +34,40 @@ export const categories = [
     name: "opinion",
     link: "category/opinion",
     title: "Opinião"
-  }
+  },
+  {
+    name: "estados-unidos",
+    link: "category/estados-unidos",
+    title: "Estados Unidos",
+  },
+  {
+    name: "asia",
+    link: "category/asia",
+    title: "Ásia",
+  },
+  {
+    name: "europa",
+    link: "category/europa",
+    title: "Europa",
+  },
+  {
+    name: "oriente-medio",
+    link: "category/oriente-medio",
+    title: "Oriente Médio",
+  },
+  {
+    name: "esportes",
+    link: "category/esportes",
+    title: "Esportes",
+  },
+  {
+    name: "tecnologia",
+    link: "category/tecnologia",
+    title: "Tecnologia",
+  },
+  {
+    name: "ciencia",
+    link: "category/ciencia",
+    title: "Ciência",
+  },
 ]

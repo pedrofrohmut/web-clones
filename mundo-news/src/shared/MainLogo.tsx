@@ -1,13 +1,12 @@
 import "/src/shared/main-logo.css"
 
 type MainLogoProps = {
-  size?: number
   className: string
 }
 
-const MainLogo: React.FC<MainLogoProps> = ({ size, className }) => {
+const MainLogo: React.FC<MainLogoProps> = ({ className }) => {
   return (
-    <div className={`main-logo ${className}`} style={{ fontSize: size }}>
+    <div className={`main-logo ${className}`}>
       <span className="main-logo__accent">Mundo</span> News
     </div>
   )

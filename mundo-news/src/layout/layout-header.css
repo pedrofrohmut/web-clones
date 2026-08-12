@@ -93,6 +93,10 @@
 .header-main__logo {
     padding: 2.85rem 0;
     text-align: center;
+
+    @media (max-width: 1024px) {
+        padding: 2.3rem 0;
+    }
 }
 
 .header-main__apoie {
@@ -114,8 +118,23 @@
     filter: var(--brightness-20);
 }
 
-@media (width < 1025px) {
-    .header-topics { display: none; }
+.header-topics {
+    --gap: 1.5rem;
+    --container-width: 1200px;
+    --left-w: 155px;
+
+    max-width: var(--container-width);
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.header-topics__nav {
+    width: calc(var(--container-width) - var(--gap) - var(--left-w));
+    overflow: hidden;
 }
 
 .header-topics__links {
@@ -125,26 +144,18 @@
     gap: 1.5rem;
 }
 
-.header-topics a {
+.header-topics__links a,
+.header-topics__links-more a {
     color: var(--clr-gray-70);
     text-decoration: none;
     font-size: 1.0rem;
     font-weight: var(--fw-bold);
+    white-space: nowrap; /* Keeps the links text single line */
 }
 
-.header-topics__visible-links {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-.header-topics__visible-links a:hover {
+.header-topics__links a:hover,
+.header-topics__links-more a:hover {
     filter: var(--brightness-40);
-}
-
-.header-topics-more-container {
-    position: relative;
 }
 
 .header-topics__button-more {
@@ -154,6 +165,7 @@
     border-radius: 0.4rem;
     font-size: 1.0rem;
     padding: 0.6rem 1.2rem;
+    min-width: 155px;
     cursor: pointer;
 }
 
@@ -162,13 +174,14 @@
 }
 
 .header-topics__nav-more {
-    position: absolute;
-    top: calc(100% + 0.4rem);
-    right: 0;
+    position: relative;
     z-index: 1;
 }
 
 .header-topics__links-more {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.3rem;
     padding: 1rem;
     margin: 0;
     list-style: none;
@@ -178,23 +191,10 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    row-rule: 2px solid var(--clr-gray-25);
 }
 
 .header-topics__links-more li {
-    padding: 0;
-    margin: 0;
-    border-bottom: 2px solid var(--clr-gray-25);
-}
-
-.header-topics__links-more a {
-    display: inline-block;
+    padding: 0.4rem;
     width: 200px;
-    padding: 0.5rem;
-}
-
-/* TODO: Temp styles for testing pages */
-@media (max-width: 730px) {
-    .layout-header {
-        display: none;
-    }
 }
