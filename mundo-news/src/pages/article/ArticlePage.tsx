@@ -70,7 +70,7 @@ const readAlsoArticles: Array<SliderArticle> = [
 
 const ArticlePage = () => {
   return (
-    <div className="container">
+    <div className="page-container">
 
       <div className="top-ad placeholder-img">Article Top Ad</div>
 

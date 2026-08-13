@@ -2,7 +2,7 @@ import "/src/pages/support/support-page.css"
 
 const SupportPage = () => {
   return (
-    <div className="container support-page">
+    <div className="page-container support-page">
 
       {/* Hero */}
       <div className="support-page__hero-wrapper">

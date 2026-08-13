@@ -181,14 +181,14 @@ const CategoryPage = () => {
 
   if (!category) {
     return (
-      <div className="container">
+      <div className="page-container">
 	<h1 className="page-title">Category not found.</h1>
       </div>
     )
   }
 
   return (
-    <div className="container">
+    <div className="page-container">
 
       <div className="top-ad placeholder-img">Category Top Ad</div>
 

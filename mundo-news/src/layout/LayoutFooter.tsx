@@ -6,7 +6,7 @@ const LayoutFooter = () => {
   return (
     <footer className="layout-footer">
 
-      <div className="footer-container container">
+      <div className="footer-container page-container">
 
         <section className="footer-about">
           <MainLogo className="footer-about__logo" />

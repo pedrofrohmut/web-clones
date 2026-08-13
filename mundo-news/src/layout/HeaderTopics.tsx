@@ -14,13 +14,14 @@ const HeaderTopics = () => {
   const topicsContainerRef = useRef<HTMLDivElement>(null)
   const topicsNavRef = useRef<HTMLDivElement>(null)
   const categoriesRef = useRef<Array<HTMLLIElement>>([])
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   // Variable to decide how many to show in the component directly and how many
   // will show only when the menu is clicked
   const [visibleCount, setVisibleCount] = useState(categories.length)
 
-  useEffect(() => {
-    if (!topicsNavRef.current || !topicsContainerRef.current || !categoriesRef.current) {
+  const calculateVisibleCount = () => {
+      if (!topicsNavRef.current || !topicsContainerRef.current || !categoriesRef.current || !buttonRef.current) {
       console.log("Could not get element to process")
       return
     }
@@ -28,12 +29,13 @@ const HeaderTopics = () => {
     const nav = topicsNavRef.current
     const container = topicsContainerRef.current
     const categoriesItems = categoriesRef.current
-
-    const availableWidth = nav.offsetWidth
+    const btn = buttonRef.current
 
     // CSS uses the container gap as a variable. Using container gap here to be consistent
     const gapStr = window.getComputedStyle(container).gap
     const gap = parseInt(gapStr.replace("px", ""))
+
+    const availableWidth = container.offsetWidth - btn.offsetWidth - gap
 
     let acc = 0
     let count = 0
@@ -54,14 +56,37 @@ const HeaderTopics = () => {
 
     // Setup the width of the nav to the new content size
     nav.style.width = `${visibleWidth}px`
-  }, [categories])
+  }
+
+  const timeout = useRef<any>(null)
+
+  const tryResize = () => {
+    if (timeout.current) {
+      clearTimeout(timeout.current)
+    }
+
+    timeout.current = setTimeout(() => {
+      console.log("Resizing topics bar...")
+      calculateVisibleCount()
+    }, 500)
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", tryResize)
+    calculateVisibleCount()
+  }, [])
 
   return (
     <div className="header-topics" ref={topicsContainerRef}>
 
         <nav className="header-topics__nav" ref={topicsNavRef}>
           <ul  className="header-topics__links">
-            {categories.slice(0, visibleCount).map((category: Category, i: number) => (
+	    {/*
+	      BugFix: Cannot limit here to visible count (categories.slice(0, visibleCount))
+	      or the resize won't work since hidden element will have 0 width and cannot be use
+	      to calculate the bar width.
+	    */}
+            {categories.map((category: Category, i: number) => (
               <li key={i} ref={e => { if (e) { categoriesRef.current[i] = e } }}>
                 <Link to={category.link ?? "#"}>{category.title}</Link>
               </li>
@@ -70,7 +95,7 @@ const HeaderTopics = () => {
         </nav>
 
         <div>
-          <button className="header-topics__button-more" onClick={handleToggleMore}>
+          <button className="header-topics__button-more" onClick={handleToggleMore} ref={buttonRef}>
             Mais Tópicos <i className="fa-solid fa-chevron-down"></i>
           </button>
 

@@ -330,7 +330,7 @@ const selectionSections: Array<Selection>  = [
 
 const HomePage = () => {
   return (
-    <div className="container">
+    <div className="page-container">
 
       <header>
         <OpinionsSlider opinions={opinions} />

@@ -7,7 +7,7 @@ import "/src/layout/layout-header.css"
 
 const Header = () => {
   return (
-    <header className="layout-header container">
+    <header className="layout-header page-container">
 
       <div className="header-top">
 

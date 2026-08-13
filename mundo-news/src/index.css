@@ -134,8 +134,8 @@ the public folder you would have to keep hitting the F5 (refresh key) */
 
 /* Utils */
 
-.container {
-    width: 96vw;
+.page-container {
+    width: 94vw;
     max-width: 1200px;
     margin: 0 auto;
 }
