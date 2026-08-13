@@ -1,6 +1,6 @@
 import { Link } from "react-router"
 
-import InlineSlider from "/src/shared/InlineSlider"
+import InlineSlider, { type SliderArticle } from "/src/shared/InlineSlider"
 import SidebarNewsletterForm from "/src/shared/SidebarNewsletterForm"
 import SidebarVideos from "/src/shared/SidebarVideos"
 
@@ -41,7 +41,7 @@ const mostReadArticles = [
   },
 ]
 
-const readAlsoArticles = [
+const readAlsoArticles: Array<SliderArticle> = [
   {
     title: "Lorem omnis culpa maiores quia hic Cumque ad saepe cumque saepe eligendi! Lorem nulla itaque?",
     date: "9 de agosto",

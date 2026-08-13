@@ -177,7 +177,15 @@ const articles = [
 const CategoryPage = () => {
   const { name: categoryName } = useParams()
 
-  const category: Category = categories.find(category => category.name === categoryName)
+  const category = categories.find((category: Category) => category.name === categoryName)
+
+  if (!category) {
+    return (
+      <div className="container">
+	<h1 className="page-title">Category not found.</h1>
+      </div>
+    )
+  }
 
   return (
     <div className="container">

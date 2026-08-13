@@ -4,24 +4,26 @@ import { textLimit } from "/src/utils/text"
 
 import "/src/shared/inline-slider.css"
 
-type Article = {
-  img: string
+export type SliderArticle = {
+  img?: string
   title: string
   date: string
 }
 
 type InlineSliderProps = {
   title: string
-  articles: Array<Article>
+  articles: Array<SliderArticle>
 }
 
 const sliderStep = 200
 
-const InlineSlider = ({ title, articles }) => {
+const InlineSlider: React.FC<InlineSliderProps> = ({ title, articles }) => {
   const sliderRef = useRef<HTMLDivElement>(null)
   const [sliderLeft, setSliderLeft] = useState<number>(0)
 
   const slideToLeft = () => {
+    if (!sliderRef.current) return
+
     const visibleWidth = sliderRef.current.offsetWidth
     const totalWidth = sliderRef.current.scrollWidth
     const limit = visibleWidth - totalWidth

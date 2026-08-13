@@ -9,7 +9,7 @@ const LayoutFooter = () => {
       <div className="footer-container container">
 
         <section className="footer-about">
-          <MainLogo size={25} className="footer-about__logo" />
+          <MainLogo className="footer-about__logo" />
 
           <div className="footer-about__address">
             <div>Endereço: Rua Principal, num: 123</div>
