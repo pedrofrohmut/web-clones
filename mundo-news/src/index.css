@@ -7,26 +7,6 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     /* Base color: #28242d */
     /* Base blue:  #3366cc */
 
-    /* Can get colors with the script in utils/make_color.js */
-
-    /* Base pallete */
-    --clr-bg: #28242d;
-    --clr-bg-secondary: #3c3749;
-    --clr-bg-accent: #544d66;
-    --clr-bg-dark: #18161d;
-
-    --clr-fg: #c9c5d3;
-    --clr-fg-secondary: #aea8bd;
-    --clr-fg-accent: #f1f0f4;
-
-    --clr-blue: #3966ff;
-    --clr-dark-blue: #1333bf;
-    --clr-yellow: #d4b87a;
-    --clr-light-green: #00ff99;
-
-    --clr-white: #ffffff;
-    --clr-black: #000000;
-
     /* Grays - from base color #28242d */
     --clr-gray-95: #f1f0f4;
     --clr-gray-90: #e4e2e9;
@@ -88,6 +68,28 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --clr-yellow-15: #3a2d13;
     --clr-yellow-10: #271e0c;
     --clr-yellow-5: #130f06;
+
+
+    /* Can get colors with the script in utils/make_color.js */
+
+    --clr-blue: #3966ff;
+    --clr-dark-blue: #1333bf;
+    --clr-yellow: #d4b87a;
+    --clr-light-green: #00ff99;
+
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+
+    /* Base pallete */
+    --clr-bg: #28242d;
+    --clr-bg-secondary: #3c3749;
+    --clr-bg-accent: #544d66;
+    --clr-bg-dark: #18161d;
+
+    --clr-fg: var(--clr-gray-80);
+    --clr-fg-secondary: var(--clr-gray-65);
+    --clr-fg-accent: var(--clr-gray-95);
+    --clr-fg-dark: var(--clr-gray-45);
 
     --container-width: min(1400px, 90vw);
 

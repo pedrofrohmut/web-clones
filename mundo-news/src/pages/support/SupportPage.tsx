@@ -129,6 +129,30 @@ const SupportPage = () => {
 
       </section>
 
+      <section className="support-page__discounts">
+
+        <div className="support-page__discounts-title">Sed sed risus pretium quam vulputate!</div>
+        <div className="support-page__discounts-subtitle">
+          Vitae congue mauris rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et.
+        </div>
+
+        <div className="support-page__discounts-cards">
+          <div className="support-page__discounts-card">Card 1</div>
+          <div className="support-page__discounts-card">Card 2</div>
+          <div className="support-page__discounts-card">Card 3</div>
+          <div className="support-page__discounts-card">Card 4</div>
+          <div className="support-page__discounts-card">Card 5</div>
+          <div className="support-page__discounts-card">Card 6</div>
+          <div className="support-page__discounts-card">Card 7</div>
+          <div className="support-page__discounts-card">Card 8</div>
+          <div className="support-page__discounts-card">Card 9</div>
+          <div className="support-page__discounts-card">Card 10</div>
+          <div className="support-page__discounts-card">Card 11</div>
+          <div className="support-page__discounts-card">Card 12</div>
+        </div>
+
+      </section>
+
     </div>
   )
 }

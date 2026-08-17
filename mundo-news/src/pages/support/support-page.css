@@ -82,6 +82,7 @@
 .support-page__pricing-subtitle {
     text-align: center;
     font-size: var(--fs-medium);
+    color: var(--clr-fg-secondary);
     margin-bottom: 3rem;
 }
 
@@ -234,6 +235,7 @@
     text-align: center;
     font-size: var(--fs-large);
     color: var(--clr-fg);
+    margin-bottom: 0.8rem;
 }
 
 .support-page__alternatives-subtitle {
@@ -301,4 +303,56 @@
     font-weight: var(--fw-bold);
     color: var(--clr-blue-10);
     background-color: var(--clr-blue);
+}
+
+/* Discounts section */
+
+.support-page__discounts {
+}
+
+.support-page__discounts-title {
+    font-size: var(--fs-large);
+    font-weight: var(--fw-bold);
+    text-align: center;
+    margin-bottom: 0.8rem;
+}
+
+.support-page__discounts-subtitle {
+    font-size: var(--fs-medium);
+    text-align: center;
+    color: var(--clr-fg-secondary);
+    margin-bottom: 2rem;
+}
+
+.support-page__discounts-cards {
+    --gap: 1.1rem;
+
+    margin: 0 auto;
+    width: min(100vw - 2rem, 900px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.support-page__discounts-card {
+    --max: calc(768px / 3);
+    --min: calc(768px / 4);
+
+    max-width: var(--max);
+    width: 28vw;
+    min-width: var(--min);
+
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    border: 2px solid var(--clr-yellow);
+    border-radius: var(--border-radius-6);
+
+    @media (max-width: 644px) {
+        width: 42vw;
+        max-width: none;
+    }
+
+    @media (max-width: 565px) {
+        width: 92vw;
+    }
 }
