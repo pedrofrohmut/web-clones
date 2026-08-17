@@ -10,11 +10,11 @@ const SupportPage = () => {
       <div className="support-page__hero-wrapper">
         <div className="support-page__hero">
 
-	  <div className="support-page__hero-left">
+          <div className="support-page__hero-left">
             <HeroLogo />
-	  </div>
+          </div>
 
-	  {/* Hero Right - Content */}
+          {/* Hero Right - Content */}
           <div className="support-page__hero-right">
             <div className="support-page__hero-accent">Ipsum provident elit eveniet libero.</div>
             <div className="support-page__hero-accent">Dolor qui voluptatem minus?</div>
@@ -30,33 +30,33 @@ const SupportPage = () => {
 
       <section className="support-page__pricing">
 
-	<div className="support-page__pricing-title">Aliquet eget sit amet tellus</div>
-	<div className="support-page__pricing-subtitle">
+        <div className="support-page__pricing-title">Aliquet eget sit amet tellus</div>
+        <div className="support-page__pricing-subtitle">
           Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere?
-	</div>
+        </div>
 
-	<div className="support-page__pricing-cards">
-	  <div className="support-page__pricing-card">
-	    <div className="support-page__pricing-card-title">Mensal</div>
-	    <div className="support-page__pricing-card-subtitle">Lacinia quis vel eros donec!</div>
-	    <div className="support-page__pricing-card-price">R$ <span>19,99</span></div>
-	    <div className="support-page__pricing-card-button">Apoie com R$ 19,99</div>
-	  </div>
+        <div className="support-page__pricing-cards">
+          <div className="support-page__pricing-card">
+            <div className="support-page__pricing-card-title">Mensal</div>
+            <div className="support-page__pricing-card-subtitle">Lacinia quis vel eros donec!</div>
+            <div className="support-page__pricing-card-price">R$ <span>19,99</span></div>
+            <div className="support-page__pricing-card-button">Apoie com R$ 19,99</div>
+          </div>
 
-	  <div className="support-page__pricing-card-highlighted">
-	    <div className="support-page__pricing-card-title">Mensal</div>
-	    <div className="support-page__pricing-card-subtitle">Dolor magna eget est lorem ipsum!</div>
-	    <div className="support-page__pricing-card-price">R$ <span>49,99</span></div>
-	    <div className="support-page__pricing-card-button">Apoie com R$ 49,99</div>
-	  </div>
+          <div className="support-page__pricing-card-highlighted">
+            <div className="support-page__pricing-card-title">Mensal</div>
+            <div className="support-page__pricing-card-subtitle">Dolor magna eget est lorem ipsum!</div>
+            <div className="support-page__pricing-card-price">R$ <span>49,99</span></div>
+            <div className="support-page__pricing-card-button">Apoie com R$ 49,99</div>
+          </div>
 
-	  <div className="support-page__pricing-card">
-	    <div className="support-page__pricing-card-title">Anual</div>
-	    <div className="support-page__pricing-card-subtitle">In mollis nunc sed id?</div>
-	    <div className="support-page__pricing-card-price">R$ <span>549,99</span></div>
-	    <div className="support-page__pricing-card-button">Apoie com R$ 549,99</div>
-	  </div>
-	</div>
+          <div className="support-page__pricing-card">
+            <div className="support-page__pricing-card-title">Anual</div>
+            <div className="support-page__pricing-card-subtitle">In mollis nunc sed id?</div>
+            <div className="support-page__pricing-card-price">R$ <span>549,99</span></div>
+            <div className="support-page__pricing-card-button">Apoie com R$ 549,99</div>
+          </div>
+        </div>
 
       </section>
 
@@ -65,15 +65,68 @@ const SupportPage = () => {
       </button>
 
       <section className="support-page__benefits">
-	<HeroLogo className="support-page__benefits-logo" />
+        <HeroLogo className="support-page__benefits-logo" />
 
-	<ul className="support-page__benefits-list">
-	  <li>Gravida neque convallis!</li>
-	  <li>Odio facilisis mauris sit.</li>
-	  <li>Ante metus?</li>
-	  <li>Tortor pretium viverra suspendisse potenti?</li>
-	  <li>Scelerisque eu ultrices vitae, auctor.</li>
-	</ul>
+        <ul className="support-page__benefits-list">
+          <li>Gravida neque convallis!</li>
+          <li>Odio facilisis mauris sit.</li>
+          <li>Ante metus?</li>
+          <li>Tortor pretium viverra suspendisse potenti?</li>
+          <li>Scelerisque eu ultrices vitae, auctor.</li>
+        </ul>
+      </section>
+
+      <section className="support-page__alternatives">
+
+        <div className="support-page__alternatives-title">A cras semper auctor</div>
+        <div className="support-page__alternatives-subtitle">Nibh tortor, id aliquet lectus proin nibh nisl</div>
+
+        <ul className="support-page__alternatives-links">
+          <li className="col-full">
+            <button>
+              <i className="fa-brands fa-google"></i> Contribua usando o Google
+            </button>
+          </li>
+          <li className="col-full">
+            <button>
+              <i className="fa-brands fa-youtube"></i> Seja membro no Youtube
+            </button>
+          </li>
+          <li className="col-full">
+            <button>
+              <i className="fa-regular fa-calendar"></i> Outros valores mensais e anuais
+            </button>
+          </li>
+          <li className="col-half">
+            <button>
+              {/* Font Awesome Free 7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc. */}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <path d="M544 576L320 450.4L96 576L96 294.7L544 294.7L544 576zM544 239.8L96 239.8L96 179.3L544 179.3L544 239.8zM544 64L544 124.5L96 124.5L96 64L544 64z"/>
+              </svg>
+                      Substack
+            </button>
+          </li>
+          <li className="col-half">
+            <button><i className="fa-solid fa-heart"></i> Apoia.se</button>
+          </li>
+          <li className="col-half">
+            <button><i className="fa-brands fa-paypal"></i> PayPal</button>
+          </li>
+          <li className="col-half">
+            <button>
+              <img alt="cartase" src="/logo_catarse_icon.png"/> Catarse
+            </button>
+          </li>
+          <li className="col-full">
+            <button>
+              <i className="fa-brands fa-pix"></i> Contribuição via PIX
+            </button>
+          </li>
+          <li className="col-full">
+	        <button className="accent">apoie@mundonews.com.br</button>
+          </li>
+        </ul>
+
       </section>
 
     </div>
