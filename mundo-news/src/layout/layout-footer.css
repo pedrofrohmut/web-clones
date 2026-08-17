@@ -17,6 +17,7 @@
 
 /* About section */
 .footer-about__logo {
+    font-size: 1.5rem;
     margin-bottom: 0.6rem;
 }
 
@@ -45,6 +46,11 @@
     text-decoration: none;
     font-size: var(--fs-regular);
     position: relative;
+}
+
+.footer__nav-links a:hover,
+.footer__topics a:hover {
+    filter: var(--brightness-40);
 }
 
 /* Social links section */
@@ -105,6 +111,11 @@
     padding: 0.4rem 1.4rem;
     font-size: var(--fs-medium);
     font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+
+.footer-contact__submit:hover {
+    filter: var(--brightness-40);
 }
 
 /* TODO: Temp styles for testing pages */
