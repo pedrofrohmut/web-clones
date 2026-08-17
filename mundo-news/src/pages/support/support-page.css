@@ -100,6 +100,7 @@
     width: 280px;
     text-align: center;
     padding: 2rem 1.2rem;
+    /* box-shadow: 2px 2px 12px 2px var(--clr-gray-10); */
     box-shadow: 10px 10px 20px 10px var(--clr-gray-10);
 
     display: grid;
@@ -164,7 +165,8 @@
     background-color: var(--clr-blue-60);
     border: 0;
     border-radius: var(--border-radius-4);
-    box-shadow: 10px 10px 20px 10px var(--clr-bg-dark);
+    /* box-shadow: 10px 10px 20px 10px var(--clr-bg-dark); */
+    box-shadow: 4px 4px 16px 4px var(--clr-gray-10);
     color: var(--clr-fg);
     padding: 0.8rem 1.6rem;
     font-size: var(--fs-medium);
