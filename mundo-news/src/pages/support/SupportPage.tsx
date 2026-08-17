@@ -1,3 +1,5 @@
+import HeroLogo from "/src/pages/support/HeroLogo"
+
 import "/src/pages/support/support-page.css"
 
 const SupportPage = () => {
@@ -8,13 +10,9 @@ const SupportPage = () => {
       <div className="support-page__hero-wrapper">
         <div className="support-page__hero">
 
-	  {/* Hero Left - Logo */}
-          <div className="support-page__hero-left">
-            <div className="support-page__hero-logo">
-              <div>Clube Mundo News</div>
-              <div>de benefícios</div>
-            </div>
-          </div>
+	  <div className="support-page__hero-left">
+            <HeroLogo />
+	  </div>
 
 	  {/* Hero Right - Content */}
           <div className="support-page__hero-right">
@@ -60,10 +58,22 @@ const SupportPage = () => {
 	  </div>
 	</div>
 
-	<button className="support-page__pricing-other-values">
-          Apoie com outros valores <i className="fa-solid fa-arrow-right"></i>
-	</button>
+      </section>
 
+      <button className="support-page__pricing-other-values">
+        Apoie com outros valores <i className="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <section className="support-page__benefits">
+	<HeroLogo className="support-page__benefits-logo" />
+
+	<ul className="support-page__benefits-list">
+	  <li>Gravida neque convallis!</li>
+	  <li>Odio facilisis mauris sit.</li>
+	  <li>Ante metus?</li>
+	  <li>Tortor pretium viverra suspendisse potenti?</li>
+	  <li>Scelerisque eu ultrices vitae, auctor.</li>
+	</ul>
       </section>
 
     </div>

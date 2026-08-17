@@ -22,6 +22,7 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --clr-blue: #3966ff;
     --clr-dark-blue: #1333bf;
     --clr-yellow: #d4b87a;
+    --clr-light-green: #00ff99;
 
     --clr-white: #ffffff;
     --clr-black: #000000;
@@ -88,12 +89,6 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --clr-yellow-10: #271e0c;
     --clr-yellow-5: #130f06;
 
-    /* --clr-newsletter-yellow: #b38f00; */
-    --clr-newsletter-yellow: #999900;
-    /* --clr-whatsapp-green: #075E54; */
-    --clr-whatsapp-green: #009900;
-    --clr-youtube-red: #990000;
-
     --container-width: min(1400px, 90vw);
 
     --fw-lighter: 100;
@@ -107,6 +102,7 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --fs-extra-small: 0.8rem;
     --fs-small: 0.9rem;
     --fs-regular: 1.0rem;
+    --fs-semi-medium: 1.1rem;
     --fs-medium: 1.2rem;
     --fs-large: 1.8rem;
     --fs-extra-large: 2.2rem;
