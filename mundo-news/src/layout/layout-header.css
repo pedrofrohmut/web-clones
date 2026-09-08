@@ -70,41 +70,82 @@
     color: var(--clr-gray-55);
 }
 
-/* TODO: Change the header-main when width < 1020px */
 .header-main {
-    /* Using position relative/absolute instead of display flex so the title
-       will always be in the center */
+    --padding: 0.4rem;
+    position: relative; /* To hold absolute children */
+    height: 100px;
+    margin: 2rem auto;
+
+    @media (max-width: 1100px) {
+        height: 78px;
+        margin: 1.4rem auto;
+    }
+
+    @media (max-width: 824px) {
+        height: 50px;
+        margin: 0.8rem auto;
+    }
+}
+
+.header-main__right,
+.header-main__left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-main__left {
+    left: var(--padding);
+}
+
+.header-main__center {
+    text-align: center;
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-main__right {
+    right: var(--padding);
 }
 
 .header-main__weather {
     background-color: var(--clr-gray-25);
-
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    min-width: 190px;
-    max-width: 300px;
-    width: 10vw;
+    width: clamp(190px, 23vw, 300px);
     height: 75px;
+
+    @media (max-width: 824px) {
+        display: none;
+    }
 }
 
-.header-main__logo {
-    padding: 2.85rem 0;
-    text-align: center;
+.header-main__menu-btn {
+    font-size: 25px;
+    border: 0;
+    background-color: var(--clr-bg-secondary);
+    color: var(--clr-fg);
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    display: none;
 
-    @media (max-width: 1024px) {
-        padding: 2.3rem 0;
+    @media (max-width: 824px) {
+        display: inline;
+    }
+}
+
+.header-main .main-logo {
+    font-size: 3.4rem;
+
+    @media (max-width: 1100px) {
+        font-size: 2.8rem;
+    }
+
+    @media (max-width: 824px) {
+        font-size: 2.2rem;
     }
 }
 
 .header-main__apoie {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-
     background-color: var(--clr-blue);
     color: var(--clr-fg);
     border: 0;
@@ -112,6 +153,14 @@
     font-size: 1.2rem;
     padding: 0.5rem 1.5rem;
     cursor: pointer;
+
+    @media (max-width: 1100px) {
+        font-size: 1.05rem;
+    }
+
+    @media (max-width: 824px) {
+        font-size: 0.90rem;
+    }
 }
 
 .header-main__apoie:hover {

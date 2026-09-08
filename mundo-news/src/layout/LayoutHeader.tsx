@@ -45,13 +45,25 @@ const Header = () => {
       </div> {/* header-top */}
 
       <div className="header-main">
-        <div className="header-main__weather">Weather app</div>
 
-        <Link to="/" className="header-main__logo-link">
-          <MainLogo className="header-main__logo" />
-        </Link>
+        <div className="header-main__left">
+          <div className="header-main__weather">Weather app</div>
 
-        <Link to="/support" className="header-main__apoie">Apoie</Link>
+          <button className="header-main__menu-btn" title="menu">
+            <i className="fa-solid fa-bars"></i>
+          </button>
+        </div>
+
+        <div className="header-main__center">
+          <Link to="/" className="header-main__logo-link">
+            <MainLogo className="header-main__logo" />
+          </Link>
+        </div>
+
+        <div className="header-main__right">
+          <Link to="/support" className="header-main__apoie">Apoie</Link>
+        </div>
+
       </div>
 
       <HeaderTopics />
