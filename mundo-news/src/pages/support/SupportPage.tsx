@@ -151,6 +151,8 @@ const SupportPage = () => {
           <div className="support-page__discounts-card">Card 12</div>
         </div>
 
+        <button className="support-page__discounts-btn">Apoie agora! <i className="fa-solid fa-arrow-right"></i></button>
+
       </section>
 
     </div>

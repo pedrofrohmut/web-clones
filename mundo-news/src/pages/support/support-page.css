@@ -308,27 +308,32 @@
 /* Discounts section */
 
 .support-page__discounts {
+    background-color: var(--clr-bg-accent);
+    padding: 2.5rem;
 }
 
 .support-page__discounts-title {
-    font-size: var(--fs-large);
-    font-weight: var(--fw-bold);
     text-align: center;
-    margin-bottom: 0.8rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-large);
+    margin-bottom: 0.75rem;
+    color: var(--clr-gray-15);
+    color: var(--clr-fg);
 }
 
 .support-page__discounts-subtitle {
-    font-size: var(--fs-medium);
     text-align: center;
-    color: var(--clr-fg-secondary);
-    margin-bottom: 2rem;
+    font-size: var(--fs-medium);
+    color: var(--clr-gray-15);
+    color: var(--clr-fg);
+    margin: 0 auto;
+    max-width: 70ch;
 }
 
 .support-page__discounts-cards {
     --gap: 1.1rem;
 
-    margin: 0 auto;
-    width: min(100vw - 2rem, 900px);
+    margin: 2.5rem auto;
     display: flex;
     flex-wrap: wrap;
     gap: var(--gap);
@@ -344,8 +349,10 @@
 
     margin: 0 auto;
     aspect-ratio: 16 / 9;
-    border: 2px solid var(--clr-yellow);
-    border-radius: var(--border-radius-6);
+    background-color: var(--clr-gray-45);
+    color: var(--clr-gray-85);
+    padding: 1rem;
+    border-radius: var(--border-radius-4);
 
     @media (max-width: 644px) {
         width: 42vw;
@@ -355,4 +362,20 @@
     @media (max-width: 565px) {
         width: 92vw;
     }
+}
+
+.support-page__discounts-btn {
+    border: 0;
+    border-radius: 0.4rem;
+    background-color: var(--clr-gray-15);
+    color: var(--clr-fg);
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-bold);
+    padding: 0.7rem 2.0rem;
+    text-transform: uppercase;
+    margin: 0 auto;
+
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
 }
