@@ -22,6 +22,11 @@
     transform: rotate(-8deg);
 }
 
+.support-page__hero-logo.wide {
+    width: fit-content;
+    transform: rotate(0);
+}
+
 /* No much use of variables here. Because it is a very unique element. */
 .support-page__hero-logo div:first-child {
     line-height: 0.75;
@@ -181,9 +186,9 @@
     margin-left: 1rem;
 }
 
-/* Benefits section */
+/* Benefits Hero section */
 
-.support-page__benefits {
+.support-page__benefits-hero {
     background-color: var(--clr-bg-dark);
     max-width: 800px;
     padding: 3rem 2rem;
@@ -198,21 +203,21 @@
     gap: 2rem;
 }
 
-.support-page__benefits .support-page__hero-logo div:first-child {
+.support-page__benefits-hero .support-page__hero-logo div:first-child {
     color: var(--clr-blue-50);
 }
 
-.support-page__benefits .support-page__hero-logo div:last-child {
+.support-page__benefits-hero .support-page__hero-logo div:last-child {
     color: var(--clr-yellow-50);
 }
 
-.support-page__benefits ul {
+.support-page__benefits-hero ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.support-page__benefits li::before {
+.support-page__benefits-hero li::before {
     content: "✔";
     font-size: 28px;
     color: var(--clr-light-green);
@@ -221,7 +226,7 @@
     margin-right: 8px;
 }
 
-.support-page__benefits li {
+.support-page__benefits-hero li {
     font-size: var(--fs-semi-medium);
 }
 
@@ -310,6 +315,7 @@
 .support-page__discounts {
     background-color: var(--clr-bg-accent);
     padding: 2.5rem;
+    margin-top: 5rem;
 }
 
 .support-page__discounts-title {
@@ -374,6 +380,88 @@
     padding: 0.7rem 2.0rem;
     text-transform: uppercase;
     margin: 0 auto;
+
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+
+/* Benefits section */
+
+.support-page__benefits {
+    margin: 5rem auto;
+}
+
+.support-page__benefits .support-page__hero-logo {
+    margin: 0 auto;
+}
+
+.support-page__benefits .support-page__hero-logo div:first-child {
+    font-size: 3.8rem;
+}
+
+.support-page__benefits .support-page__hero-logo div:last-child {
+    color: var(--clr-yellow-50);
+}
+
+.support-page__benefits-subtitle {
+    max-width: 100ch;
+    text-align: center;
+    margin: 2rem auto;
+    font-size: var(--fs-semi-medium);
+}
+
+.support-page__benefits-cards {
+    max-width: 1000px;
+    margin: 4rem auto 0;
+    display: grid;
+    gap: 2rem;
+}
+
+.support-page__benefits .card {
+    background-color: var(--clr-bg-secondary);
+    margin: 0 auto;
+    max-width: 55ch;
+    padding: 1.2rem;
+    border-radius: 0.6rem;
+}
+
+@media (max-width: 620px) {
+    .support-page__benefits .col-half {
+        grid-column: span 2;
+    }
+}
+
+.support-page__benefits .card-icon {
+    font-size: 1.4rem;
+    color: var(--clr-blue-60);
+    margin-bottom: 0.6rem;
+    background-color: var(--clr-gray-75);
+    padding: 0.4rem 0.8rem;
+    display: inline-block;
+    border-radius: 0.4rem;
+}
+
+.support-page__benefits .card-title {
+    font-size: var(--fs-regular);
+    font-weight: var(--fw-semibold);
+    margin-bottom: 0.2rem;
+}
+
+.support-page__benefits .card-subtitle {
+    font-size: var(--fs-small);
+}
+
+.support-page__benefits-btn {
+    border: 0;
+    border-radius: 0.4rem;
+    background-color: var(--clr-blue-55);
+    color: var(--clr-fg);
+    font-size: var(--fs-medium);
+    font-weight: var(--fw-bold);
+    padding: 0.7rem 2.0rem;
+    text-transform: uppercase;
+    margin: 3rem auto 0;
 
     display: flex;
     gap: 0.8rem;

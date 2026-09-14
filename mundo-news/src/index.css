@@ -329,3 +329,6 @@ a {
     background-color: var(--clr-gray-10);
     color: var(--clr-gray-90);
 }
+
+.col-half { grid-column: span 1; }
+.col-full { grid-column: span 2; }

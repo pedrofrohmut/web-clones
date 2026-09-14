@@ -64,10 +64,10 @@ const SupportPage = () => {
         Apoie com outros valores <i className="fa-solid fa-arrow-right"></i>
       </button>
 
-      <section className="support-page__benefits">
-        <HeroLogo className="support-page__benefits-logo" />
+      <section className="support-page__benefits-hero">
+        <HeroLogo className="support-page__benefits-hero-logo" />
 
-        <ul className="support-page__benefits-list">
+        <ul className="support-page__benefits-hero-list">
           <li>Gravida neque convallis!</li>
           <li>Odio facilisis mauris sit.</li>
           <li>Ante metus?</li>
@@ -152,6 +152,65 @@ const SupportPage = () => {
         </div>
 
         <button className="support-page__discounts-btn">Apoie agora! <i className="fa-solid fa-arrow-right"></i></button>
+
+      </section>
+
+      <section className="support-page__benefits">
+
+        <HeroLogo type="wide" />
+
+        <div className="support-page__benefits-subtitle">
+          Ipsum consectetur officiis distinctio excepturi dolores cupiditate beatae, temporibus eius labore
+          Non necessitatibus sed possimus laborum omnis quae aliquid eveniet porro? Natus alias cum cum porro
+          quibusdam? Quaerat corrupti expedita blanditiis hic sequi Nesciunt repellat eos ratione quisquam
+          explicabo commodi! Repellat et
+        </div>
+
+        <div className="support-page__benefits-cards">
+
+          <div className="col-half">
+            <div className="card">
+              <div className="card-icon"><i className="fa-solid fa-envelope"></i></div>
+              <div className="card-title">Lorem magni consectetur ex</div>
+              <div className="card-subtitle">Adipisicing iusto praesentium vero quos voluptate</div>
+            </div>
+          </div>
+
+          <div className="col-half">
+            <div className="card">
+              <div className="card-icon"><i className="fa-solid fa-trophy"></i></div>
+              <div className="card-title">Amet facere quae?</div>
+              <div className="card-subtitle">Sit ex tenetur provident obcaecati adipisicing! Pariatur!</div>
+            </div>
+          </div>
+
+          <div className="col-half">
+            <div className="card">
+              <div className="card-icon"><i className="fa-solid fa-gift"></i></div>
+              <div className="card-title">Lorem magnam sapiente provident</div>
+              <div className="card-subtitle">Elit consequatur nisi at atque ratione? Omnis quasi?</div>
+            </div>
+          </div>
+
+          <div className="col-half">
+            <div className="card">
+              <div className="card-icon"><i className="fa-solid fa-camera"></i></div>
+              <div className="card-title">Consectetur quibusdam dolore aspernatur corporis.</div>
+              <div className="card-subtitle">Dolor ut iste esse eos odit?</div>
+            </div>
+          </div>
+
+          <div className="col-full">
+            <div className="card">
+              <div className="card-icon"><i className="fa-solid fa-message"></i></div>
+              <div className="card-title">Ipsum quibusdam ad in at.</div>
+              <div className="card-subtitle">Consectetur neque asperiores architecto dolore dignissimos. Inventore voluptate</div>
+            </div>
+          </div>
+
+        </div>
+
+        <button className="support-page__benefits-btn">Apoie agora! <i className="fa-solid fa-arrow-right"></i></button>
 
       </section>
 
