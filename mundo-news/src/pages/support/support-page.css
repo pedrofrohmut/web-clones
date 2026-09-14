@@ -225,10 +225,12 @@
 
 .support-page__benefits-hero .support-page__hero-logo div:first-child {
     color: var(--clr-blue-50);
+    font-size: clamp(3.0rem, 9vw, 4.5rem);
 }
 
 .support-page__benefits-hero .support-page__hero-logo div:last-child {
     color: var(--clr-yellow-50);
+    font-size: clamp(2.4rem, 7vw, 3.6rem);
 }
 
 .support-page__benefits-hero ul {
@@ -239,15 +241,23 @@
 
 .support-page__benefits-hero li::before {
     content: "✔";
-    font-size: 28px;
     color: var(--clr-light-green);
     position: relative;
     top: 3px;
     margin-right: 8px;
+    font-size: clamp(22px, 3vw, 28px);
 }
 
 .support-page__benefits-hero li {
-    font-size: var(--fs-semi-medium);
+    font-size: clamp(0.85rem, 2.2vw, 1.1rem);
+}
+
+@media (max-width: 620px) {
+    .support-page__benefits-hero { grid-template-columns: auto; }
+    .support-page__benefits-hero .support-page__hero-logo { margin: 0 auto; }
+    .support-page__benefits-hero .support-page__hero-logo div:first-child { font-size: 4.5rem; }
+    .support-page__benefits-hero .support-page__hero-logo div:last-child { font-size: 3.6rem; }
+    .support-page__benefits-hero li { font-size: clamp(1.0rem, 3vw, 1.1rem); }
 }
 
 /* Alternatives section */
@@ -277,7 +287,7 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.75rem;
+    gap: clamp(0.85rem, 3vw, 1.25rem);
 }
 
 .support-page__alternatives-links .col-full {
