@@ -11,17 +11,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     column-rule: 2px solid var(--clr-gray-25); /* Adds the divisor line in the gap */
-    gap: clamp(1rem, 3vw, 3rem);
-
-    @media (max-width: 710px) {
-        grid-template-columns: repeat(2, 1fr);
-        row-rule: 2px solid var(--clr-gray-25);
-        padding: 1rem;
-    }
-
-    @media (max-width: 480px) {
-        grid-template-columns: 1fr;
-    }
+    gap: clamp(1.5rem, 4vw, 3rem);
 }
 
 .footer-container section {
@@ -130,4 +120,43 @@
 
 .footer-contact__submit:hover {
     filter: var(--brightness-40);
+}
+
+@media (max-width: 710px) {
+    .layout-footer {
+        padding: 2rem 1rem;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        row-rule: 2px solid var(--clr-gray-25);
+        gap: 2rem;
+    }
+
+    .footer-about__address,
+    .footer-contact__subheader {
+        font-size: var(--fs-small);
+    }
+
+    .footer__nav-links a,
+    .footer__topics a,
+    .footer-socials__header,
+    .footer-socials__links.socials a,
+    .footer-contact__header {
+        font-size: var(--fs-regular);
+    }
+
+    .footer-socials__links.socials i {
+        font-size: 1.3rem;
+    }
+
+    .footer-contact__submit {
+        font-size: var(--fs-medium);
+    }
+}
+
+@media (max-width: 510px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
 }
