@@ -1,4 +1,7 @@
 .layout-footer {
+    --fs-clamp-small: clamp(0.8rem, 1.3vw, 0.9rem);
+    --fs-clamp-regular: clamp(0.8rem, 1.4vw, 1rem);
+
     margin-top: 2.5rem;
     padding: 2.5rem 0 5rem;
     background-color: var(--clr-gray-10);
@@ -7,8 +10,18 @@
 .footer-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 3rem;
     column-rule: 2px solid var(--clr-gray-25); /* Adds the divisor line in the gap */
+    gap: clamp(1rem, 3vw, 3rem);
+
+    @media (max-width: 710px) {
+        grid-template-columns: repeat(2, 1fr);
+        row-rule: 2px solid var(--clr-gray-25);
+        padding: 1rem;
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .footer-container section {
@@ -22,8 +35,8 @@
 }
 
 .footer-about__address {
-    font-size: var(--fs-small);
     line-height: 1.5;
+    font-size: var(--fs-clamp-small);
 }
 
 /* nav-links and topics sections */
@@ -44,8 +57,8 @@
     --color: var(--clr-fg);
     color: var(--color);
     text-decoration: none;
-    font-size: var(--fs-regular);
     position: relative;
+    font-size: var(--fs-clamp-regular);
 }
 
 .footer__nav-links a:hover,
@@ -61,8 +74,8 @@
 }
 
 .footer-socials__header {
-    font-size: var(--fs-regular);
     margin-bottom: 1.0rem;
+    font-size: var(--fs-clamp-regular);
 }
 
 .footer-socials__links ul {
@@ -75,14 +88,14 @@
 }
 
 .footer-socials__links.socials i {
-    font-size: 1.3rem;
     margin-right: 0.3rem;
     position: relative;
     top: 3px;
+    font-size: clamp(1rem, 2.8vw, 1.3rem);
 }
 
 .footer-socials__links.socials a {
-    font-size: 1rem;
+    font-size: var(--fs-clamp-regular);
 }
 
 /* Footer contact section */
@@ -95,12 +108,12 @@
 }
 
 .footer-contact__header {
-    font-size: var(--fs-regular);
     font-weight: var(--fw-bold);
+    font-size: var(--fs-clamp-regular);
 }
 
 .footer-contact__subheader {
-    font-size: var(--fs-small);
+    font-size: var(--fs-clamp-small);
 }
 
 .footer-contact__submit {
@@ -108,19 +121,13 @@
     border-radius: var(--border-radius-4);
     color: var(--clr-fg);
     background-color: var(--clr-blue);
-    padding: 0.4rem 1.4rem;
-    font-size: var(--fs-medium);
     font-weight: var(--fw-bold);
     cursor: pointer;
+
+    font-size: clamp(0.8rem, 1.7vw, 1.2rem);
+    padding: 0.4rem clamp(0.9rem, 1.5vw, 1.4rem);
 }
 
 .footer-contact__submit:hover {
     filter: var(--brightness-40);
-}
-
-/* TODO: Temp styles for testing pages */
-@media (max-width: 730px) {
-    .layout-footer {
-        display: none;
-    }
 }
