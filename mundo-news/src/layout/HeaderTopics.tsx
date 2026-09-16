@@ -21,7 +21,7 @@ const HeaderTopics = () => {
   const [visibleCount, setVisibleCount] = useState(categories.length)
 
   const calculateVisibleCount = () => {
-      if (!topicsNavRef.current || !topicsContainerRef.current || !categoriesRef.current || !buttonRef.current) {
+    if (!topicsNavRef.current || !topicsContainerRef.current || !categoriesRef.current || !buttonRef.current) {
       console.log("Could not get element to process")
       return
     }
@@ -34,6 +34,11 @@ const HeaderTopics = () => {
     // CSS uses the container gap as a variable. Using container gap here to be consistent
     const gapStr = window.getComputedStyle(container).gap
     const gap = parseInt(gapStr.replace("px", ""))
+
+    if (container.offsetWidth <= 0) {
+      // Early return in case the topics component is hidden in the UI
+      return
+    }
 
     const availableWidth = container.offsetWidth - btn.offsetWidth - gap
 
@@ -76,29 +81,31 @@ const HeaderTopics = () => {
     calculateVisibleCount()
   }, [])
 
-  const moreIcon = isOpenMore ? <i className="fa-solid fa-times"></i> : <i className="fa-solid fa-chevron-down"></i>
+  const buttonMoreIcon = isOpenMore ? <i className="fa-solid fa-times"></i> : <i className="fa-solid fa-chevron-down"></i>
 
   return (
     <div className="header-topics" ref={topicsContainerRef}>
 
         <nav className="header-topics__nav" ref={topicsNavRef}>
           <ul  className="header-topics__links">
-	    {/*
-	      BugFix: Cannot limit here to visible count (categories.slice(0, visibleCount))
-	      or the resize won't work since hidden element will have 0 width and cannot be use
-	      to calculate the bar width.
-	    */}
+
+	          {/*
+	            BugFix: Cannot limit here to visible count (categories.slice(0, visibleCount))
+	            or the resize won't work since hidden element will have 0 width and cannot be use
+	            to calculate the bar width.
+	          */}
             {categories.map((category: Category, i: number) => (
               <li key={i} ref={e => { if (e) { categoriesRef.current[i] = e } }}>
                 <Link to={category.link ?? "#"}>{category.title}</Link>
               </li>
             ))}
+
           </ul>
         </nav>
 
         <div>
           <button className="header-topics__button-more" onClick={handleToggleMore} ref={buttonRef}>
-            Mais Tópicos {moreIcon}
+            Mais Tópicos {buttonMoreIcon}
           </button>
 
           {isOpenMore && (
