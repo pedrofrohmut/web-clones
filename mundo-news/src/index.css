@@ -124,6 +124,9 @@ the public folder you would have to keep hitting the F5 (refresh key) */
     --ff-noto-serif: "Noto Serif", serif;
     --ff-roboto: "Roboto", sans-serif;
     --ff-parisienne: "Parisienne", cursive;
+
+    --z-modal: 5;
+    --z-overmodal: 10;
 }
 
 *, *::after, *::before {

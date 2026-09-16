@@ -6,6 +6,7 @@
 - [ ] Make the website responsive. Make it work with smaller screens like tablets
 and phones.
     - [X] Layout Header
+    - [ ] Layout Header - Make the menu for small screens that have the functions that are hidden
     - [X] Layout Footer
     - [ ] Home page
     - [X] Category page responsive

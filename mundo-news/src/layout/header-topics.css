@@ -16,6 +16,12 @@
     }
 }
 
+.header-topics__close-modal {
+    background-color: #181818bb;
+    position: fixed;
+    inset: 0 0 0 0;
+}
+
 .header-topics__nav {
     width: calc(var(--container-width) - var(--gap) - var(--left-w));
     overflow: hidden;
@@ -51,15 +57,16 @@
     padding: 0.6rem 1.2rem;
     min-width: 155px;
     cursor: pointer;
+    position: relative;
 }
 
 .header-topics__button-more:hover {
     filter: var(--brightness-20);
 }
 
+
 .header-topics__nav-more {
     position: relative;
-    z-index: 1;
 }
 
 .header-topics__links-more {
@@ -81,4 +88,15 @@
 .header-topics__links-more li {
     padding: 0.4rem;
     width: 200px;
+}
+
+/* Section to setup z-index of modal and menus */
+
+.header-topics__close-modal {
+    z-index: var(--z-modal);
+}
+
+.header-topics__button-more,
+.header-topics__links-more {
+    z-index: var(--z-overmodal);
 }

@@ -76,6 +76,8 @@ const HeaderTopics = () => {
     calculateVisibleCount()
   }, [])
 
+  const moreIcon = isOpenMore ? <i className="fa-solid fa-times"></i> : <i className="fa-solid fa-chevron-down"></i>
+
   return (
     <div className="header-topics" ref={topicsContainerRef}>
 
@@ -96,11 +98,12 @@ const HeaderTopics = () => {
 
         <div>
           <button className="header-topics__button-more" onClick={handleToggleMore} ref={buttonRef}>
-            Mais Tópicos <i className="fa-solid fa-chevron-down"></i>
+            Mais Tópicos {moreIcon}
           </button>
 
           {isOpenMore && (
             <nav className="header-topics__nav-more">
+              <div onClick={handleToggleMore} className="header-topics__close-modal"></div>
               <ul className="header-topics__links-more">
                 {categories.slice(visibleCount, categories.length).map((category: Category, i: number) => (
                   <li key={i} ref={e => { if (e) { categoriesRef.current[i] = e } }}>
