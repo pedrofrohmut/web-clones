@@ -1,28 +1,12 @@
 .home-content {
     margin-top: 3.5rem;
     display: grid;
-    /* grid-template-areas: "left right"; */
     grid-template-columns: 1fr 300px;
     gap: 2rem;
 
     @media (max-width: 956px) {
-        /* border: 3px solid blue; */
         grid-template-columns: 1fr;
     }
-
-    @media (max-width: 768px) {
-        /* border: 3px solid red; */
-    }
-}
-
-.home-content__left {
-/*     grid-area: left; */
-}
-
-.home-content__right {
-/*     grid-area: right; */
-    max-width: 300px;
-    margin: 0 auto;
 }
 
 .home-article-topic {
@@ -272,8 +256,10 @@
 /* Sidebar */
 
 .home-sidebar {
-    display: flex;
-    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+
+    display: grid;
     gap: 1.2rem;
 }
 

@@ -42,6 +42,8 @@ const HeaderTopics = () => {
       return
     }
 
+    console.log("Resizing topics bar...")
+
     const availableWidth = container.offsetWidth - btn.offsetWidth - gap
 
     let acc = 0
@@ -73,7 +75,6 @@ const HeaderTopics = () => {
     }
 
     timeout.current = setTimeout(() => {
-      console.log("Resizing topics bar...")
       calculateVisibleCount()
     }, 500)
   }
