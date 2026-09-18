@@ -31,7 +31,7 @@ const LayoutFooter = () => {
           <ul>
             <li><a href="#">Política e Economia</a></li>
             <li><a href="#">Opinião</a></li>
-            <li><a href="#">Opera Entrevista</a></li>
+            <li><a href="#">Mundo Entrevista</a></li>
             <li><a href="#">Guerra Israel x Irã</a></li>
             <li><a href="#">Pensar a História</a></li>
             <li><a href="#">Sociedade</a></li>

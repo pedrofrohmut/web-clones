@@ -1,6 +1,5 @@
 import { Link } from "react-router"
 
-// Components
 import OpinionsSlider from "/src/pages/home/OpinionsSlider"
 import HeaderAd from "/src/pages/home/HeaderAd"
 import MiddleAd from "/src/pages/home/MiddleAd"
@@ -8,10 +7,8 @@ import SelectionSection from "/src/pages/home/SelectionSection"
 import SidebarNewsletterForm from "/src/shared/SidebarNewsletterForm"
 import SidebarVideos from "/src/shared/SidebarVideos"
 
-// Css
 import "/src/pages/home/home-page.css"
 
-// Data
 import opinions from "/src/pages/home/opinions"
 
 export type Article = {
@@ -220,7 +217,7 @@ const selectionSections: Array<Selection>  = [
     ],
   },
   {
-    topic: "Opera Entrevista",
+    topic: "Mundo Entrevista",
     articles: [
       {
         title: "‘Donec vero incolas arcu lacus Faciem me Vel’, est praeclusa dis-oleantem",
