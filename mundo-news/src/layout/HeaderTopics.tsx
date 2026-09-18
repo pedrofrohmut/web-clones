@@ -1,10 +1,12 @@
 import { useState, useRef, useEffect } from "react"
 import { categories, type Category } from "/src/data/categories"
-import { Link } from "react-router"
+import { Link, useNavigate } from "react-router"
 
 import "/src/layout/header-topics.css"
 
 const HeaderTopics = () => {
+  const navigate = useNavigate()
+
   const [isOpenMore, setIsOpenMore] = useState<boolean>(false)
 
   const handleToggleMore = () => {
@@ -83,6 +85,11 @@ const HeaderTopics = () => {
 
   const buttonMoreIcon = isOpenMore ? <i className="fa-solid fa-times"></i> : <i className="fa-solid fa-chevron-down"></i>
 
+  const handleClickOnMoreLink = (link) => {
+    setIsOpenMore(false)
+    navigate(link ?? "#")
+  }
+
   return (
     <div className="header-topics" ref={topicsContainerRef}>
 
@@ -114,7 +121,7 @@ const HeaderTopics = () => {
               <ul className="header-topics__links-more">
                 {categories.slice(visibleCount, categories.length).map((category: Category, i: number) => (
                   <li key={i} ref={e => { if (e) { categoriesRef.current[i] = e } }}>
-                    <Link to={category.link ?? "#"}>{category.title}</Link>
+                    <span onClick={() => handleClickOnMoreLink(category.link)}>{category.title}</span>
                   </li>
                 ))}
               </ul>
